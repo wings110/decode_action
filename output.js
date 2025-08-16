@@ -1,919 +1,773 @@
-//Tue Aug 12 2025 02:53:17 GMT+0000 (Coordinated Universal Time)
+//Sat Aug 16 2025 01:42:25 GMT+0000 (Coordinated Universal Time)
 //Base:<url id="cv1cref6o68qmpt26ol0" type="url" status="parsed" title="GitHub - echo094/decode-js: JS混淆代码的AST分析工具 AST analysis tool for obfuscated JS code" wc="2165">https://github.com/echo094/decode-js</url>
 //Modify:<url id="cv1cref6o68qmpt26olg" type="url" status="parsed" title="GitHub - smallfawn/decode_action: 世界上本来不存在加密，加密的人多了，也便成就了解密" wc="741">https://github.com/smallfawn/decode_action</url>
-const il1li1 = new iilii1("联通云盘任务"),
-  l111ii = il1li1.isNode() ? require("./sendNotify") : "",
-  i1III1 = 1,
-  l1ii1i = 0,
+const Iili1I = new lli1li("联通安全管家任务"),
+  lli1i1 = Iili1I.isNode() ? require("./sendNotify") : "",
+  IIlli1 = 1,
+  ilIiii = 0,
   {
-    v4: l1liII
+    v4: ilIiil
   } = require("uuid"),
-  I1ii1 = require("crypto"),
-  li1111 = require("crypto-js"),
-  IiliI = l1liII();
-let IiIIiI = process.env.chinaUnicomCookie,
-  I11IiI = "",
-  l111il = "";
-ckArr = IiIIiI.split("&");
-ll1ilI("【debug】 这是你的账号数组:\n " + ckArr);
+  iII = ilIiil();
+let l11IlI = process.env.chinaUnicomCookie,
+  lIIl = "",
+  lIl1i = "";
+ckArr = l11IlI.split("&");
+IIiIii("【debug】 这是你的账号数组:\n " + ckArr);
 !(async () => {
-  ckArr = IiIIiI.split("&");
-  await l1liI1();
-  for (let ll1I11 = 0; ll1I11 < ckArr.length; ll1I11++) {
-    let l1lli = ll1I11 + 1;
-    console.log("------------- 开始【第 " + l1lli + " 个账号】-------------");
-    l111il = ckArr[ll1I11].split("&");
-    ll1ilI("【debug】 这是你第 " + l1lli + " 账号信息:\n " + l111il);
-    await I11Iil();
-    await il1li1.wait(2000);
-    if (num1 == 1) {
-      console.log("当前online过期，跳过...");
-      continue;
+  ckArr = l11IlI.split("&");
+  await ilIil1();
+  for (let Ii1li1 = 0; Ii1li1 < ckArr.length; Ii1li1++) {
+    {
+      let iiil1 = Ii1li1 + 1;
+      console.log("------------- 开始【第 " + iiil1 + " 个账号】-------------");
+      lIl1i = ckArr[Ii1li1].split("&");
+      IIiIii("【debug】 这是你第 " + iiil1 + " 账号信息:\n " + lIl1i);
+      await IIlliI();
+      await Iili1I.wait(2000);
+      if (num1 == 1) {
+        console.log("当前online过期，跳过...");
+        continue;
+      }
+      customDateString = lIi11I();
+      await Iili1I.wait(2000);
+      await Iili1l();
+      await iIlIi1();
+      await liIiil();
+      console.log("获取ck中，等待一会...");
+      await Iili1I.wait(5000);
+      oldjf = null;
+      await l11Ill();
+      await liIiii();
+      await Iili1I.wait(15000);
+      await l11Ill();
     }
-    customDateString = li111l();
-    const il1lli = require("axios");
-    let IIi1Il = {
-      "method": "GET",
-      "url": "https://m.client.10010.com/mobileService/openPlatform/openPlatLineNew.htm?appName=shouting&clientid=1001000003&to_url=https://panservice.mail.wo.cn/h5/activitymobile/turn-template?activityId%3D6",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@11.0800}",
-        "Cookie": "PvSessionId=" + customDateString + "" + IiliI + ";c_mobile=" + num1 + "; c_version=iphone_c@11.0800; city=036|" + cityCode + "|90063345|-99;devicedId=" + IiliI + "; ecs_token=" + ecs_token + ";t3_token=" + t3_token + ""
-      },
-      "maxRedirects": 0
-    };
-    await il1lli.request(IIi1Il).catch(li1lII => {
-      wenb = li1lII.request.res.rawHeaders[13];
-      ticket1 = wenb.match(/ticket=([^&]+)/);
-      ticket = ticket1[1];
-    });
-    await il1li1.wait(2000);
-    req = Math.floor(89999 * Math.random()) + 100000;
-    sjc13 = Math.round(new Date().getTime()).toString();
-    const l1lll = "HandheldHallAutoLogin" + sjc13 + "" + req + "100002",
-      IIi1Ii = I1ii1.createHash("md5");
-    IIi1Ii.update(l1lll);
-    md5Hash = IIi1Ii.digest("hex");
-    await Il1l1();
-    await Il1lI();
-    console.log("获取ck中，等待一会...");
-    await il1li1.wait(5000);
-    oldjf = null;
-    await IiIIi1();
-    await l1ii1I();
-    await il1li1.wait(6000);
-    await IiIIi1();
   }
-  await I1iiI(I11IiI);
-})().catch(Il11II => il1li1.logErr(Il11II)).finally(() => il1li1.done());
-async function Il1lI() {
-  let I11Ill = {
-      "url": "https://panservice.mail.wo.cn/api-user/api/user/ticket",
+  await lIl1I1(lIIl);
+})().catch(ilII1I => Iili1I.logErr(ilII1I)).finally(() => Iili1I.done());
+async function Iili1l() {
+  let lli1l1 = {
+      "url": "https://m.client.10" + t + "1" + t + ".com/edop_ng/getTicketByNative?token=" + ecs_token + "&appId=edop_unicom_3a6cc75a",
       "headers": {
-        "Accept-Encoding": "gzip;q=1.0, compress;q=0.5",
-        "source-type": "woapi",
-        "Host": "panservice.mail.wo.cn",
-        "X-YP-Client-Id": "1001000003",
-        "Connection": "keep-alive",
-        "app-type": "unicom",
-        "accesstoken": token,
-        "Content-Type": "application/json",
-        "User-Agent": "ChinaUnicom4.x/12.2 (com.chinaunicom.mobilebusiness; build:44; iOS 16.6.0) Alamofire/4.7.3 unicom{version:iphone_c@12.0200}",
-        "Accept-Language": "zh-Hans-CN;q=1.0",
-        "X-CM-SERVICE": "PHONE",
-        "token": token,
+        "Cookie": "PvSessionId=" + customDateString + "" + iII + ";c_mobile=" + num1 + ("; c_version=iphone_c@11." + t + "8" + t + t + "; city=" + t + "36|") + cityCode + ("|9" + t + t + "63345|-99;devicedId=") + iII + "; ecs_token=" + ecs_token + ";t3_token=" + t3_token + "",
         "Accept": "*",
-        "X-YP-Open-Version": "v1.0",
-        "X-YP-Access-Token": token,
-        "clientId": "1001000003",
-        "access-token": token,
-        "client-id": "1001000003"
-      },
-      "body": "{}"
+        "Connection": "keep-alive",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept-Encoding": "gzip;q=1." + t + ", compress;q=" + t + ".5",
+        "Host": "m.client.1" + t + t + "1" + t + ".com",
+        "User-Agent": "ChinaUnicom4.x/12.3.1 (com.chinaunicom.mobilebusiness; build:77; iOS 16.6.0) Alamofire/4.7.3 unicom{version:iphone_c@12.0301}",
+        "Accept-Language": "zh-Hans-CN;q=1.0"
+      }
     },
-    IlII1l = await li111i(I11Ill, "ticket");
-  ticket = IlII1l.result.ticket;
-  const IiIIll = require("axios");
-  let lIiiii = JSON.stringify({
-      "activityId": "s743585947358590976",
-      "partnersId": "1649"
+    lii1l = await IIiIil(lli1l1, "ticket");
+  ticket1 = lii1l.ticket;
+}
+async function liIiil() {
+  let ll1i = {
+      "url": "https://uca.wo116114.com/api/v1/auth/getTicket?product_line=uasp&entry_point=h5&entry_point_id=edop_unicom_3a6cc75a",
+      "headers": {
+        "User-Agent": "ChinaUnicom4.x/12.3.1 (com.chinaunicom.mobilebusiness; build:77; iOS 16.6.0) Alamofire/4.7.3 unicom{version:iphone_c@12.0301}",
+        "Accept": "*",
+        "Accept-Encoding": "gzip;q=1.0, compress;q=0.5",
+        "Content-Type": "application/json",
+        "auth-sa-token": token,
+        "Accept-Language": "zh-Hans-CN;q=1.0",
+        "clientType": "uasp_unicom_applet"
+      },
+      "body": "{\"productId\": \"91311616\",\"phone\": \"" + num1 + "\"}"
+    },
+    lliII = await lli1ll(ll1i, "ticket");
+  ticket = lliII.data.ticket;
+  const iiiiI = require("axios");
+  let iiIlIl = JSON.stringify({
+      "activityId": "s747395186896173056",
+      "partnersId": "1702"
     }),
-    iililI = {
+    iiIlIi = {
       "method": "POST",
       "url": "https://m.jf.10010.com/jf-external-application/page/query",
       "headers": {
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0200}",
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0301};ltst;OSVersion/16.6",
         "Accept": "application/json, text/plain, */*",
         "Content-Type": "application/json",
         "content-type": "application/json;charset=UTF-8",
-        "partnersid": "1649",
-        "ticket": ticket,
+        "partnersid": "1702",
+        "ticket": decodeURIComponent(ticket),
         "sec-fetch-site": "same-origin",
         "accept-language": "zh-CN,zh-Hans;q=0.9",
         "sec-fetch-mode": "cors",
         "origin": "https://m.jf.10010.com",
-        "clienttype": "yunpan_unicon_applet",
+        "clienttype": "uasp_unicom_applet",
         "sec-fetch-dest": "empty"
       },
-      "data": lIiiii
+      "data": iiIlIl
     };
-  IiIIll.request(iililI).then(IlII1I => {
-    const i1Il1i = IlII1I.headers["set-cookie"],
-      lIiil1 = i1Il1i.find(IiIIl1 => IiIIl1.startsWith("_jea_id="));
-    jeaId = lIiil1?.["split"](";")[0]?.["split"]("=")[1] || "未找到 Cookie";
-    const i1Il1l = IlII1I.data;
-    if (i1Il1l.code === "0000") {
-      {
-        const i111I1 = JSON.parse(i1Il1l.data.pageData),
-          I11Ili = {};
-        i111I1.modules.forEach(IIi1II => {
-          IIi1II.data?.["content"]?.["taskId"] && (I11Ili.signTaskId = IIi1II.data.content.taskId);
-          Array.isArray(IIi1II.data?.["content"]?.["goodsList"]) && IIi1II.data.content.goodsList.forEach(l1IIIi => {
-            if (l1IIIi.taskId) {
-              if (l1IIIi.goodsName === "上传文件到云盘") I11Ili.uploadFileTaskId = l1IIIi.taskId;else {
-                if (l1IIIi.goodsName === "分享文件") I11Ili.shareFileTaskId = l1IIIi.taskId;else {
-                  if (l1IIIi.goodsName === "当月上传容量满1G") {
-                    I11Ili.storage1GBTaskId = l1IIIi.taskId;
-                  }
-                }
-              }
-            }
-          });
-        });
-      }
-    } else console.log("请求失败:", i1Il1l.msg);
-  }).catch(l11I => console.log("error", l11I));
+  iiiiI.request(iiIlIi).then(I1ii => {
+    const I1il = I1ii.headers["set-cookie"],
+      I1Iiil = I1il.find(I1Iiii => I1Iiii.startsWith("_jea_id="));
+    jeaId = I1Iiil?.["split"](";")[0]?.["split"]("=")[1] || "未找到 Cookie";
+  }).catch(lIIliI => console.log("error", lIIliI));
 }
-async function lli1l() {
-  req = Math.floor(89999 * Math.random()) + 100000;
-  sjc13 = Math.round(new Date().getTime()).toString();
-  const iiiii1 = "ShareFile" + sjc13 + "" + req + "wohome",
-    IIill1 = I1ii1.createHash("md5");
-  IIill1.update(iiiii1);
-  md5Hash = IIill1.digest("hex");
-  function iIII(Il1lIl, I1111I, I1I11) {
-    const il11l1 = li1111.enc.Utf8.parse(I1111I),
-      I1I1l = li1111.enc.Utf8.parse(I1I11),
-      i1II1I = li1111.AES.encrypt(Il1lIl, il11l1, {
-        "iv": I1I1l,
-        "mode": li1111.mode.CBC,
-        "padding": li1111.pad.Pkcs7
-      });
-    return i1II1I.toString();
-  }
-  const iI1I1 = "{fileIds: \"cb26981fc8ae43cf9600e0c0d1f4c33d\",fileFolderIds: \"\",days: 7,autoFill: \"1\",clientId: \"1001000003\"}",
-    Ii11iI = lli1i(token),
-    IiliII = "wNSOYIB1k1DjY5lA";
-  param = iIII(iI1I1, Ii11iI, IiliII);
-  let Iiii1I = {
-      "url": "https://panservice.mail.wo.cn/wohome/dispatcher",
+async function l11Il1() {
+  let i11llI = {
+      "url": "https://uca.wo116114.com/sjgj/woAssistant/umm/configs/v1/config?product_line=uasp&entry_point=h5&entry_point_id=wxdefbc1986dc757a6",
       "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090c33)XWEB/11581",
+        "User-Agent": "ChinaUnicom4.x/12.3.1 (com.chinaunicom.mobilebusiness; build:77; iOS 16.6.0) Alamofire/4.7.3 unicom{version:iphone_c@12.0301}",
+        "Accept": "*",
+        "Accept-Encoding": "gzip;q=1.0, compress;q=0.5",
         "Content-Type": "application/json",
-        "accesstoken": token,
-        "xweb_xhr": "1",
-        "Sec-Fetch-Site": "cross-site",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Dest": "empty",
-        "Referer": "https://servicewechat.com/wxd456d97d8aa1ee4e/85/page-frame.html",
-        "Accept-Language": "zh-CN,zh;q=0.9"
+        "auth-sa-token": token,
+        "Accept-Language": "zh-Hans-CN;q=1.0",
+        "clientType": "uasp_unicom_applet"
       },
-      "body": "{\"header\": {\"key\": \"ShareFile\",\"resTime\": " + sjc13 + ",\"reqSeq\": " + req + ",\"channel\": \"wohome\",\"version\": \"\",\"sign\": \"" + md5Hash + "\"},\"body\": {\"param\":\"" + param + "\",\"clientId\":\"1001000003\",\"secret\":true}}"
+      "body": "{\"contents\":[{\"content\":\"13088330789\",\"contentTag\":\"\"}],\"operationType\":0,\"type\":1,\"blacklistSource\":0,\"productId\":\"91311616\"}"
     },
-    II1il1 = await li111i(Iiii1I, "分享");
+    iIIi1 = await lli1ll(i11llI, "黑名单");
 }
-async function Iili1() {
-  req = Math.floor(89999 * Math.random()) + 100000;
-  sjc13 = Math.round(new Date().getTime()).toString();
-  const I1I1i = "AppQueryUser" + sjc13 + "" + req + "api-user",
-    iiiiii = I1ii1.createHash("md5");
-  iiiiii.update(I1I1i);
-  md5Hash = iiiiii.digest("hex");
-  function iiiiil(ililI, II1ilI, iII1ii) {
-    const li1III = li1111.enc.Utf8.parse(II1ilI),
-      lIii1 = li1111.enc.Utf8.parse(iII1ii),
-      IIl1il = li1111.AES.encrypt(ililI, li1III, {
-        "iv": lIii1,
-        "mode": li1111.mode.CBC,
-        "padding": li1111.pad.Pkcs7
-      });
-    return IIl1il.toString();
-  }
-  const l1Il11 = "{\"accessToken\":\"" + token + "\"}",
-    IIl1lI = "Py1J67PAQoCb8Iel",
-    ilii1i = "wNSOYIB1k1DjY5lA";
-  param = iiiiil(l1Il11, IIl1lI, ilii1i);
-  let IiliIl = {
-      "url": "https://panservice.mail.wo.cn/api-user/dispatcher",
+async function Iili1i() {
+  let IlIili = {
+      "url": "https://uca.wo116114.com/sjgj/unicomAssistant/uasp/configs/v1/addressBook/saveTagPhone?product_line=uasp&entry_point=h5&entry_point_id=wxdefbc1986dc757a6",
       "headers": {
-        "Sec-Fetch-Dest": "empty",
-        "Connection": "keep-alive",
-        "Accept-Encoding": "gzip, deflate, br",
+        "User-Agent": "ChinaUnicom4.x/12.3.1 (com.chinaunicom.mobilebusiness; build:77; iOS 16.6.0) Alamofire/4.7.3 unicom{version:iphone_c@12.0301}",
+        "Accept": "*",
+        "Accept-Encoding": "gzip;q=1.0, compress;q=0.5",
         "Content-Type": "application/json",
-        "Sec-Fetch-Site": "same-origin",
-        "Origin": "https://panservice.mail.wo.cn",
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) LianTongYunPan/4.0.4 (iPhone; iOS 16.6)",
-        "Client-Id": "1001000035",
-        "Sec-Fetch-Mode": "cors",
-        "App-Version": "yp-app/4.0.4",
-        "Host": "panservice.mail.wo.cn",
-        "Access-Token": token,
-        "Accept-Language": "zh-CN,zh-Hans;q=0.9",
-        "Accept": "application/json, text/plain, */*"
+        "auth-sa-token": token,
+        "Accept-Language": "zh-Hans-CN;q=1.0",
+        "clientType": "uasp_unicom_applet"
       },
-      "body": "{\"header\":{\"key\":\"AppQueryUser\",\"resTime\":" + sjc13 + ",\"reqSeq\":" + req + ",\"channel\":\"api-user\",\"version\":\"\",\"sign\":\"" + md5Hash + "\"},\"body\":{\"param\":\"" + param + "\",\"clientId\":\"1001000003\",\"secret\":true}}"
+      "body": "{\"tagPhoneNo\":\"13088330789\",\"tagIds\":[26],\"status\":0,\"productId\":\"91311616\"}"
     },
-    ilii1l = await li111i(IiliIl, "浏览");
-  await IiiiIl();
+    I1iI = await lli1ll(IlIili, "标记");
 }
-async function l1lil() {
-  req = Math.floor(89999 * Math.random()) + 100000;
-  sjc13 = Math.round(new Date().getTime()).toString();
-  function lIlII1(II1ii1, Ii11l1, II1iiI) {
-    {
-      const I1111i = li1111.enc.Utf8.parse(Ii11l1),
-        iliiI = li1111.enc.Utf8.parse(II1iiI),
-        lIil1 = li1111.AES.encrypt(II1ii1, I1111i, {
-          "iv": iliiI,
-          "mode": li1111.mode.CBC,
-          "padding": li1111.pad.Pkcs7
-        });
-      return lIil1.toString();
-    }
-  }
-  const Il111I = new Date(),
-    l1Il1l = "" + Il111I.getFullYear() + String(Il111I.getMonth() + 1).padStart(2, "0") + String(Il111I.getDate()).padStart(2, "0") + String(Il111I.getHours()).padStart(2, "0") + String(Il111I.getMinutes()).padStart(2, "0") + String(Il111I.getSeconds()).padStart(2, "0"),
-    il1i = "{\"spaceType\":\"0\",\"directoryId\":\"0\",\"batchNo\":\"" + l1Il1l + "\",\"fileName\":\"2025年4月16日20时26分33秒.jpg\",\"fileSize\":6376590,\"fileType\":\"1\"}",
-    IIl1ii = lli1i(token),
-    il1l = "wNSOYIB1k1DjY5lA";
-  param = lIlII1(il1i, IIl1ii, il1l);
-  const Ii11ll = require("request"),
-    ilil1 = require("fs"),
-    llII = require("path"),
-    li1l11 = {
-      "timestamp": Date.now(),
-      "randomString": Math.random().toString(36).substring(2, 8),
-      "accessToken": token,
-      "fileName": "2025年4月16日20时26分33秒.jpg",
-      "filePath": llII.join(__dirname, "313d8600-873e-42a0-bd8d-7357bde2ac43"),
-      "fileSize": ilil1.statSync(llII.join(__dirname, "313d8600-873e-42a0-bd8d-7357bde2ac43")).size,
-      "channel": "wocloud",
-      "directoryId": "0",
-      "fileInfo": param,
-      "contentType": "null"
-    },
-    lIiI1I = {
-      "uniqueId": li1l11.timestamp + "_" + li1l11.randomString,
-      "accessToken": li1l11.accessToken,
-      "fileName": li1l11.fileName,
-      "psToken": "undefined",
-      "fileSize": li1l11.fileSize.toString(),
-      "totalPart": "1",
-      "partSize": li1l11.fileSize.toString(),
-      "partIndex": "1",
-      "channel": li1l11.channel,
-      "directoryId": li1l11.directoryId,
-      "fileInfo": li1l11.fileInfo,
-      "file": {
-        "value": ilil1.createReadStream(li1l11.filePath),
-        "options": {
-          "filename": llII.basename(li1l11.filePath),
-          "contentType": li1l11.contentType
-        }
-      }
-    },
-    lII1iI = {
-      "method": "POST",
-      "url": "https://tjupload.pan.wo.cn/openapi/client/upload2C",
+async function IIiIli() {
+  let i11ll1 = {
+      "url": "https://uca.wo116114.com/sjgj/unicomAssistant/uasp/configs/v1/addressBookBatchConfig?product_line=uasp&entry_point=h5&entry_point_id=edop_unicom_3a6cc75a",
       "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0",
-        "Accept-Encoding": "gzip, deflate, br, zstd",
-        "sec-ch-ua-platform": "\"Windows\"",
-        "sec-ch-ua": "\"Microsoft Edge\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
-        "dnt": "1",
-        "sec-ch-ua-mobile": "?0",
-        "origin": "https://pan.wo.cn",
-        "sec-fetch-site": "same-site",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-dest": "empty",
-        "referer": "https://pan.wo.cn/",
-        "accept-language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
-        "priority": "u=1, i"
-      },
-      "formData": lIiI1I
-    };
-  Ii11ll(lII1iI, function (Il1lII, iiiill, IIl1iI) {
-    if (Il1lII) throw new Error(Il1lII);
-  });
-}
-function lli1i(Ii11ii) {
-  if (typeof Ii11ii !== "string") throw new TypeError("输入必须是一个字符串");
-  return Ii11ii.substring(0, 16);
-}
-async function Il1l1() {
-  let Ii11il = {
-      "url": "https://panservice.mail.wo.cn/wohome/dispatcher",
-      "headers": {
-        "Connection": "keep-alive",
-        "Accept-Encoding": "gzip, deflate, br",
-        "accessToken": "",
+        "User-Agent": "ChinaUnicom4.x/12.3.1 (com.chinaunicom.mobilebusiness; build:77; iOS 16.6.0) Alamofire/4.7.3 unicom{version:iphone_c@12.0301}",
+        "Accept": "*",
+        "Accept-Encoding": "gzip;q=1.0, compress;q=0.5",
         "Content-Type": "application/json",
-        "client-Id": "1001000003",
-        "Origin": "https://panservice.mail.wo.cn",
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@11.0602}",
-        "access-token": "",
-        "Host": "panservice.mail.wo.cn",
-        "X-YP-Client-Id": "1001000003",
-        "Accept-Language": "zh-CN,zh-Hans;q=0.9",
-        "Accept": "application/json, text/plain, */*"
+        "auth-sa-token": token,
+        "Accept-Language": "zh-Hans-CN;q=1.0",
+        "clientType": "uasp_unicom_applet"
       },
-      "body": "{\"header\": {\"key\": \"HandheldHallAutoLogin\",\"resTime\": " + sjc13 + ",\"reqSeq\": " + req + ",\"channel\": \"100002\",\"version\": \"\",\"sign\": \"" + md5Hash + "\"},\"body\": {\"clientId\": \"1001000003\",\"ticket\": \"" + ticket + "\"}}"
+      "body": "{\"addressBookDTOList\":[{\"addressBookPhoneNo\":\"13105750575\",\"addressBookName\":\"可乐\"}],\"productId\":\"91311616\",\"opType\":\"1\"}"
     },
-    ilii1 = await li111i(Ii11il, "token");
-  token = ilii1.RSP.DATA.token;
+    iIiIII = await lli1ll(i11ll1, "通讯录");
 }
-async function IiiiIl() {
-  let lli1I1 = {
-      "url": "https://panservice.mail.wo.cn/activity/v1/activityList",
+async function lIl1l() {
+  let i11lil = {
+      "url": "https://uca.wo116114.com/sjgj/woAssistant/umm/configs/v1/config?product_line=uasp&entry_point=h5&entry_point_id=wxdefbc1986dc757a6",
       "headers": {
-        "Sec-Fetch-Dest": "empty",
-        "Sys-Version": "ios/16_6",
-        "Connection": "keep-alive",
-        "Accept-Encoding": "gzip, deflate, br",
+        "User-Agent": "ChinaUnicom4.x/12.3.1 (com.chinaunicom.mobilebusiness; build:77; iOS 16.6.0) Alamofire/4.7.3 unicom{version:iphone_c@12.0301}",
+        "Accept": "*",
+        "Accept-Encoding": "gzip;q=1.0, compress;q=0.5",
         "Content-Type": "application/json",
-        "credentials": "include",
-        "Sec-Fetch-Site": "same-origin",
-        "Origin": "https://panservice.mail.wo.cn",
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) LianTongYunPan/4.0.4 (iPhone; iOS 16.6)",
-        "Client-Id": "1001000035",
-        "Sec-Fetch-Mode": "cors",
-        "App-Version": "yp-app/4.0.4",
-        "Host": "panservice.mail.wo.cn",
-        "Access-Token": token,
-        "Accept-Language": "zh-CN,zh-Hans;q=0.9",
-        "Accept": "application/json, text/plain, */*"
+        "auth-sa-token": token,
+        "Accept-Language": "zh-Hans-CN;q=1.0",
+        "clientType": "uasp_unicom_applet"
       },
-      "body": "{\n  \"bizKey\": \"activityCenterPipeline\",\n  \"bizObject\": {\n    \"pageNo\": 1\n  }\n}"
+      "body": "{\"contents\":[{\"name\":\"rings-once\",\"contentTag\":\"8\",\"contentName\":\"响一声\",\"content\":\"0\",\"icon\":\"alerting\"}],\"operationType\":0,\"type\":3,\"productId\":\"91311616\"}"
     },
-    II1I1i = await li111i(lli1I1, "浏览任务");
+    iilI1I = await lli1ll(i11lil, "拦截");
 }
-async function i1IIII(lIiI) {
-  let lIi1 = {
-      "url": "https://m.jf.10010.com/jf-external-application/jftask/toFinish",
+async function iIlIii() {
+  let lIiii1 = {
+      "url": "https://uca.wo116114.com/sjgj/unicomAssistant/uasp/configs/v1/weeklySwitchStatus?product_line=uasp&entry_point=h5&entry_point_id=wxdefbc1986dc757a6",
       "headers": {
-        "clientType": "yunpan_unicon_applet",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
-        "ticket": ticket,
+        "User-Agent": "ChinaUnicom4.x/12.3.1 (com.chinaunicom.mobilebusiness; build:77; iOS 16.6.0) Alamofire/4.7.3 unicom{version:iphone_c@12.0301}",
+        "Accept": "*",
+        "Accept-Encoding": "gzip;q=1.0, compress;q=0.5",
         "Content-Type": "application/json",
-        "Sec-Fetch-Site": "same-origin",
-        "Origin": "https://m.jf.10010.com",
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0200}",
-        "Sec-Fetch-Mode": "cors",
-        "partnersId": "1649",
-        "Host": "m.jf.10010.com",
-        "Cookie": "_jea_id=" + jeaId + ";",
-        "Accept-Language": "zh-CN,zh-Hans;q=0.9",
-        "Accept": "application/json, text/plain, */*"
+        "auth-sa-token": token,
+        "Accept-Language": "zh-Hans-CN;q=1.0",
+        "clientType": "uasp_unicom_applet"
       },
-      "body": "{\n  \"taskCode\": \"" + lIiI + "\"\n}"
+      "body": "{\"productId\":\"91311616\"}"
     },
-    lIill = await li111i(lIi1, "开启任务");
-  xinxi = lIill.msg;
-  await Iili1();
+    iIlII = await lli1ll(lIiii1, "查看");
 }
-async function l1ii11(iIlIIi) {
-  let ilIIIi = {
-      "url": "https://m.jf.10010.com/jf-external-application/jftask/toFinish",
+async function iiI111() {
+  let iilI11 = {
+      "url": "https://uca.wo116114.com/sjgj/unicomAssistant/uasp/report/v1/queryKeyData?product_line=uasp&entry_point=h5&entry_point_id=wxdefbc1986dc757a6",
       "headers": {
-        "clientType": "yunpan_unicon_applet",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
-        "ticket": ticket,
+        "User-Agent": "ChinaUnicom4.x/12.3.1 (com.chinaunicom.mobilebusiness; build:77; iOS 16.6.0) Alamofire/4.7.3 unicom{version:iphone_c@12.0301}",
+        "Accept": "*",
+        "Accept-Encoding": "gzip;q=1.0, compress;q=0.5",
         "Content-Type": "application/json",
-        "Sec-Fetch-Site": "same-origin",
-        "Origin": "https://m.jf.10010.com",
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0200}",
-        "Sec-Fetch-Mode": "cors",
-        "partnersId": "1649",
-        "Host": "m.jf.10010.com",
-        "Cookie": "_jea_id=" + jeaId + ";",
-        "Accept-Language": "zh-CN,zh-Hans;q=0.9",
-        "Accept": "application/json, text/plain, */*"
+        "auth-sa-token": token,
+        "Accept-Language": "zh-Hans-CN;q=1.0",
+        "clientType": "uasp_unicom_applet"
       },
-      "body": "{\n  \"taskCode\": \"" + iIlIIi + "\"\n}"
+      "body": "{\"productId\":\"91311616\"}"
     },
-    iIiI11 = await li111i(ilIIIi, "开启任务");
-  xinxi = iIiI11.msg;
-  await l1lil();
+    lIiiiI = await lli1ll(iilI11, "查看");
 }
-async function IiiiIi(iii) {
-  let liIiIi = {
-      "url": "https://m.jf.10010.com/jf-external-application/jftask/toFinish",
+async function lIi111() {
+  let IlIiii = {
+      "url": "https://uca.wo116114.com/sjgj/unicomAssistant/uasp/report/v1/weeklySummary?product_line=uasp&entry_point=h5&entry_point_id=wxdefbc1986dc757a6",
       "headers": {
-        "clientType": "yunpan_unicon_applet",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
-        "ticket": ticket,
+        "User-Agent": "ChinaUnicom4.x/12.3.1 (com.chinaunicom.mobilebusiness; build:77; iOS 16.6.0) Alamofire/4.7.3 unicom{version:iphone_c@12.0301}",
+        "Accept": "*",
+        "Accept-Encoding": "gzip;q=1.0, compress;q=0.5",
         "Content-Type": "application/json",
-        "Sec-Fetch-Site": "same-origin",
-        "Origin": "https://m.jf.10010.com",
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0200}",
-        "Sec-Fetch-Mode": "cors",
-        "partnersId": "1649",
-        "Host": "m.jf.10010.com",
-        "Cookie": "_jea_id=" + jeaId + ";",
-        "Accept-Language": "zh-CN,zh-Hans;q=0.9",
-        "Accept": "application/json, text/plain, */*"
+        "auth-sa-token": token,
+        "Accept-Language": "zh-Hans-CN;q=1.0",
+        "clientType": "uasp_unicom_applet"
       },
-      "body": "{\n  \"taskCode\": \"" + iii + "\"\n}"
+      "body": "{\"productId\":\"91311616\"}"
     },
-    iil = await li111i(liIiIi, "开启任务");
-  xinxi = iil.msg;
-  await lli1l();
+    ilIII1 = await lli1ll(IlIiii, "查看");
 }
-async function l1lii(lII1l1) {
-  let iIlIII = {
-      "url": "https://m.jf.10010.com/jf-external-application/jftask/toFinish",
+async function iIlIi1() {
+  let ll1ii1 = {
+      "url": "https://uca.wo116114.com/api/v1/auth/ticket?product_line=uasp&entry_point=h5&entry_point_id=edop_unicom_3a6cc75a",
       "headers": {
-        "clientType": "yunpan_unicon_applet",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
-        "ticket": ticket,
+        "User-Agent": "ChinaUnicom4.x/12.3.1 (com.chinaunicom.mobilebusiness; build:77; iOS 16.6.0) Alamofire/4.7.3 unicom{version:iphone_c@12.0301}",
+        "Accept": "*",
+        "Accept-Encoding": "gzip;q=1.0, compress;q=0.5",
         "Content-Type": "application/json",
-        "Sec-Fetch-Site": "same-origin",
-        "Origin": "https://m.jf.10010.com",
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0200}",
-        "Sec-Fetch-Mode": "cors",
-        "partnersId": "1649",
-        "Host": "m.jf.10010.com",
-        "Cookie": "_jea_id=" + jeaId + ";",
-        "Accept-Language": "zh-CN,zh-Hans;q=0.9",
-        "Accept": "application/json, text/plain, */*"
+        "Accept-Language": "zh-Hans-CN;q=1.0",
+        "clientType": "uasp_unicom_applet"
       },
-      "body": "{\n  \"taskCode\": \"" + lII1l1 + "\"\n}"
+      "body": "{\"productId\": \"\",\"type\": 1,\"ticket\": \"" + ticket1 + "\"}"
     },
-    iIIll = await li111i(iIlIII, "开启任务");
-  xinxi = iIIll.msg;
+    i11li1 = await lli1ll(ll1ii1, "token");
+  token = i11li1.data.access_token;
 }
-async function llillI(iIIli) {
-  let liIiI1 = {
-      "url": "https://m.jf.10010.com/jf-external-application/jftask/sign",
+async function IIiIll(I1Iili) {
+  let I1li = {
+      "url": "https://m.jf.10010.com/jf-external-application/jftask/receive",
       "headers": {
-        "clientType": "yunpan_unicon_applet",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
-        "ticket": ticket,
-        "Content-Type": "application/json",
-        "Sec-Fetch-Site": "same-origin",
-        "Origin": "https://m.jf.10010.com",
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0200}",
-        "Sec-Fetch-Mode": "cors",
-        "partnersId": "1649",
-        "Host": "m.jf.10010.com",
-        "Cookie": "_jea_id=" + jeaId + ";",
-        "Accept-Language": "zh-CN,zh-Hans;q=0.9",
-        "Accept": "application/json, text/plain, */*"
-      },
-      "body": "{\n  \"taskCode\": \"" + iIIli + "\"\n}"
-    },
-    lIil = await li111i(liIiI1, "完成签到");
-  xinxi = lIil.msg;
-}
-async function l1ii1I() {
-  let Il1Iil = {
-      "url": "https://m.jf.10010.com/jf-external-application/jftask/taskDetail",
-      "headers": {
-        "Sec-Fetch-Dest": "empty",
-        "clientType": "yunpan_unicon_applet",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
-        "ticket": ticket,
-        "Content-Type": "application/json",
-        "Sec-Fetch-Site": "same-origin",
-        "Origin": "https://m.jf.10010.com",
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0200}",
-        "Sec-Fetch-Mode": "cors",
-        "partnersId": "1649",
-        "Host": "m.jf.10010.com",
+        "ticket": decodeURIComponent(ticket),
         "Cookie": "_jea_id=" + jeaId,
-        "Accept-Language": "zh-CN,zh-Hans;q=0.9",
-        "Accept": "application/json, text/plain, */*"
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0301};ltst;OSVersion/16.6",
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "content-type": "application/json;charset=UTF-8",
+        "partnersid": "1702",
+        "sec-fetch-site": "same-origin",
+        "accept-language": "zh-CN,zh-Hans;q=0.9",
+        "sec-fetch-mode": "cors",
+        "origin": "https://m.jf.10010.com",
+        "clienttype": "uasp_unicom_applet",
+        "sec-fetch-dest": "empty"
+      },
+      "body": "{\"taskCode\": \"" + I1Iili + "\"}"
+    },
+    iIllIi = await lli1ll(I1li, "领取积分");
+  iIllIi.data.score ? console.log("领取" + iIllIi.data.score + iIllIi.msg) : console.log("领取" + iIllIi.msg);
+}
+async function iIi(I1ll, ll1iii) {
+  let lIIlli = {
+      "url": "https://m.jf.10010.com/jf-external-application/jftask/toFinish",
+      "headers": {
+        "ticket": decodeURIComponent(ticket),
+        "Cookie": "_jea_id=" + jeaId,
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0301};ltst;OSVersion/16.6",
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "content-type": "application/json;charset=UTF-8",
+        "partnersid": "1702",
+        "sec-fetch-site": "same-origin",
+        "accept-language": "zh-CN,zh-Hans;q=0.9",
+        "sec-fetch-mode": "cors",
+        "origin": "https://m.jf.10010.com",
+        "clienttype": "uasp_unicom_applet",
+        "sec-fetch-dest": "empty"
+      },
+      "body": "{\"taskCode\": \"" + I1ll + "\"}"
+    },
+    I1Iill = await lli1ll(lIIlli, "开启任务 " + ll1iii);
+  xinxi = I1Iill.msg;
+  switch (ll1iii) {
+    case "联通安全管家-添加黑名单":
+      await l11Il1();
+      break;
+    case "联通安全管家-号码标记":
+      await Iili1i();
+      break;
+    case "联通安全管家-同步通讯录":
+      await IIiIli();
+      break;
+    case "联通安全管家-骚扰拦截设置":
+      await lIl1l();
+      break;
+    case "联通安全管家-查看周报":
+      await iIlIii();
+      await iiI111();
+      await lIi111();
+      break;
+    default:
+      throw new Error("任务 " + ll1iii + " 需要手动完成");
+      break;
+  }
+}
+async function iI1i(Il1il) {
+  let lll1ii = {
+      "url": "https://m.jf." + a + t + t + a + t + ".com/jf-external-application/jftask/sign",
+      "headers": {
+        "ticket": decodeURIComponent(ticket),
+        "Cookie": "_jea_id=" + jeaId,
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0301};ltst;OSVersion/16.6",
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "content-type": "application/json;charset=UTF-8",
+        "partnersid": "1702",
+        "sec-fetch-site": "same-origin",
+        "accept-language": "zh-CN,zh-Hans;q=0.9",
+        "sec-fetch-mode": "cors",
+        "origin": "https://m.jf.10010.com",
+        "clienttype": "uasp_unicom_applet",
+        "sec-fetch-dest": "empty"
+      },
+      "body": "{\n  \"taskCode\": \"" + Il1il + "\"\n}"
+    },
+    lIIllI = await lli1ll(lll1ii, "完成签到");
+  xinxi = lIIllI.msg;
+}
+async function liIiii() {
+  let IiI11i = {
+      "url": "https://m.jf.1" + t + t + "1" + t + ".com/jf-external-application/jftask/taskDetail",
+      "headers": {
+        "ticket": decodeURIComponent(ticket),
+        "Cookie": "_jea_id=" + jeaId,
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0301};ltst;OSVersion/16.6",
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "content-type": "application/json;charset=UTF-8",
+        "partnersid": "1702",
+        "sec-fetch-site": "same-origin",
+        "accept-language": "zh-CN,zh-Hans;q=0.9",
+        "sec-fetch-mode": "cors",
+        "origin": "https://m.jf.10010.com",
+        "clienttype": "uasp_unicom_applet",
+        "sec-fetch-dest": "empty"
       },
       "body": "{}"
     },
-    ilI = await li111i(Il1Iil, "查询任务");
-  const iIIlI = ilI.data.taskDetail.taskList;
-  for (const Ii1ii of iIIlI) {
-    {
-      const {
-        taskCode: iiiI1,
-        taskName: lII1i,
-        finishCount: lII1l,
-        needCount: i11lll
-      } = Ii1ii;
-      console.log(lII1i + "：" + lII1l + "/" + i11lll);
-      if (lII1l !== i11lll) {
-        const il11iI = i11lll - lII1l;
-        console.log("任务未完成，需要再执行 " + il11iI + " 次");
-        for (let i11lli = 0; i11lli < il11iI; i11lli++) {
-          try {
-            await il1li1.wait(1000);
-            if (lII1i == "联通云盘-签到") {
-              await llillI(iiiI1);
-            } else {
-              if (lII1i == "联通云盘-分享文件") {
-                await IiiiIi(iiiI1);
-                await il1li1.wait(5000);
-              } else {
-                if (lII1i == "联通云盘-手动上传文件") await l1ii11(iiiI1), await il1li1.wait(5000);else {
-                  if (lII1i == "联通云盘-浏览活动中心") await i1IIII(iiiI1), await il1li1.wait(5000);else {
-                    await l1lii(iiiI1);
-                    await il1li1.wait(5000);
-                  }
-                }
-              }
-            }
-            console.log("第 " + (i11lli + 1) + " 次执行" + xinxi);
-          } catch (l1i1li) {
-            console.error("执行 " + iiiI1 + " 时出错");
+    iIil1l = await lli1ll(IiI11i, "查询任务");
+  const iIil11 = iIil1l.data.taskDetail.taskList;
+  for (const i1IIII of iIil11) {
+    const {
+      taskCode: l1ii11,
+      taskName: IiiiIi,
+      finishCount: l1lii,
+      needCount: llillI,
+      finishText: l1ii1I
+    } = i1IIII;
+    console.log(IiiiIi + "：" + l1lii + "/" + llillI + " - " + l1ii1I);
+    if (l1lii !== llillI) {
+      const IiIIi1 = llillI - l1lii;
+      console.log("任务未完成，需要再执行 " + IiIIi1 + " 次");
+      for (let I11Iil = 0; I11Iil < IiIIi1; I11Iil++) {
+        await Iili1I.wait(3000);
+        try {
+          if (IiiiIi == "联通安全管家-连续1天签到") await iI1i(l1ii11);else {
+            await iIi(l1ii11, IiiiIi);
+          }
+          console.log("第 " + (I11Iil + 1) + " 次执行" + IiiiIi + "任务完成");
+          await Iili1I.wait(10000);
+          await IIiIll(l1ii11);
+          console.log(IiiiIi + " 奖励领取成功");
+        } catch (illi11) {
+          {
+            console.error("执行 " + l1ii11 + " 时出错: " + illi11.message);
             break;
           }
         }
-      } else {
-        console.log("任务已完成");
       }
-      console.log("---------------------");
+    } else {
+      if (l1ii1I == "待领取") {
+        try {
+          await Iili1I.wait(3000);
+          await IIiIll(l1ii11);
+          console.log(IiiiIi + " 奖励领取成功");
+        } catch (il1lil) {
+          console.error("领取 " + l1ii11 + " 奖励时出错: " + il1lil.message);
+        }
+      } else {
+        console.log("任务已完成且奖励已领取");
+      }
     }
+    console.log("---------------------");
   }
 }
-async function IiIIi1() {
-  let ilill1 = {
+async function l11Ill() {
+  let I1iii = {
       "url": "https://m.jf.10010.com/jf-external-application/jftask/userInfo",
       "headers": {
-        "clientType": "yunpan_unicon_applet",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
-        "ticket": ticket,
+        "ticket": decodeURIComponent(ticket),
+        "Cookie": "_jea_id=" + jeaId,
+        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0301};ltst;OSVersion/16.6",
+        "Accept": "application/json, text/plain, */*",
         "Content-Type": "application/json",
-        "Sec-Fetch-Site": "same-origin",
-        "Origin": "https://m.jf.10010.com",
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 unicom{version:iphone_c@12.0200}",
-        "Sec-Fetch-Mode": "cors",
-        "partnersId": "1649",
-        "Host": "m.jf.10010.com",
-        "Cookie": "_jea_id=" + jeaId + ";",
-        "Accept-Language": "zh-CN,zh-Hans;q=0.9",
-        "Accept": "application/json, text/plain, */*"
+        "content-type": "application/json;charset=UTF-8",
+        "partnersid": "1702",
+        "sec-fetch-site": "same-origin",
+        "accept-language": "zh-CN,zh-Hans;q=0.9",
+        "sec-fetch-mode": "cors",
+        "origin": "https://m.jf.10010.com",
+        "clienttype": "uasp_unicom_applet",
+        "sec-fetch-dest": "empty"
       },
       "body": "{}"
     },
-    iIIiI1 = await li111i(ilill1, "查询积分");
-  if (oldjf == null) oldjf = iIIiI1.data.availableScore;else {
-    const iIIiII = iIIiI1.data.availableScore;
-    console.log("用户" + iIIiI1.data.phone + "运行前积分：" + oldjf + ",运行后积分" + iIIiII + "，本次运行获得" + (iIIiII - oldjf));
-    I11IiI += "\n用户" + iIIiI1.data.phone + "运行前积分：" + oldjf + ",运行后积分" + iIIiII + "，本次运行获得" + (iIIiII - oldjf);
+    li111i = await lli1ll(I1iii, "查询积分");
+  if (oldjf == null) oldjf = li111i.data.availableScore;else {
+    const l1ii1l = li111i.data.availableScore;
+    console.log("用户" + num1 + "运行前积分：" + oldjf + ",运行后积分" + l1ii1l + "，本次运行获得" + (l1ii1l - oldjf));
+    lIIl += "\n用户" + num1 + "运行前积分：" + oldjf + ",运行后积分" + l1ii1l + "，本次运行获得" + (l1ii1l - oldjf);
   }
 }
-async function I11Iil() {
-  let I1IiI1 = {
-      "url": "https://m.client.10010.com/mobileService/onLine.htm",
+async function IIlliI() {
+  let l1liIi = {
+      "url": "https://m.client." + a + t + t + a + t + ".com/mobileService/onLine.htm",
       "headers": {
         "Accept-Encoding": "gzip, deflate, br",
         "Connection": "keep-alive",
         "Content-Type": "application/x-www-form-urlencoded",
         "Accept": "*/*",
-        "Host": "m.client.10010.com",
-        "User-Agent": "ChinaUnicom.x CFNetwork iOS/16.3.1 unicom{version:iphone_c@11.0700}",
-        "Accept-Language": "zh-CN,zh-Hans;q=0.9"
+        "Host": "m.client." + a + t + t + a + t + ".com",
+        "User-Agent": "ChinaUnicom.x CFNetwork iOS/" + a + "6.3." + a + " unicom{version:iphone_c@" + a + a + "." + t + "7" + t + t + "}",
+        "Accept-Language": "zh-CN,zh-Hans;q=" + t + ".9"
       },
-      "body": "deviceModel=iPhone&step=background&token_online=" + l111il + "&version=iphone_c%4011.0700"
+      "body": "deviceModel=iPhone&step=background&token_online=" + lIl1i + ("&version=iphone_c%4" + t + a + a + "." + t + "7" + t + t)
     },
-    IlIl1i = await li111i(I1IiI1, "获取");
+    I11Ii1 = await lli1ll(l1liIi, "获取");
   try {
-    t3_token = IlIl1i.t3_token;
-    private_token = IlIl1i.private_token;
-    ecs_token = IlIl1i.ecs_token;
-    num1 = IlIl1i.list[0].num;
-    cityCode = IlIl1i.list[0].cityCode;
-  } catch (I1li1) {
+    t3_token = I11Ii1.t3_token;
+    private_token = I11Ii1.private_token;
+    ecs_token = I11Ii1.ecs_token;
+    num1 = I11Ii1.list[0].num;
+    cityCode = I11Ii1.list[0].cityCode;
+  } catch (iiliiI) {
     num1 = "1";
   }
 }
-async function l1liI1() {
-  let ill1lI = {
+async function ilIil1() {
+  let lIiI11 = {
       "url": "https://gitee.com/kele2233/genxin/raw/master/ydid.json",
       "headers": {
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.43(0x18002b2d) NetType/WIFI Language/zh_CN"
       }
     },
-    Ili1l = await I1iii(ill1lI, "ll");
-  hqsjc = Ili1l.ymsjc;
-  gong = Ili1l.gong;
+    li111I = await IIiIil(lIiI11, "ll");
+  hqsjc = li111I.ymsjc;
+  gong = li111I.gong;
   dqsjc = Math.round(new Date().getTime() / 1000).toString();
-  if (hqsjc > dqsjc) console.log("公告：" + Ili1l.gh), console.log("当前版本1.2，最新版本" + Ili1l.fwbbh), console.log("当前脚本有效期至" + ll1il1(hqsjc));else {
+  if (hqsjc > dqsjc) {
+    console.log("公告：" + li111I.gh);
+    console.log("当前版本1.2，最新版本" + li111I.fwbbh);
+    t = li111I.fwbbh - 1.2;
+    a = Math.floor(li111I.fwbbh);
+    console.log("当前脚本有效期至" + iiill(hqsjc));
+  } else {
     console.error(gong);
     process.exit();
   }
 }
-async function I11Iii(lII11I, ii111I) {
-  return new Promise(IlIIIl => {
-    let llilI1 = [];
-    if (lII11I) {
-      if (lII11I.indexOf("@") !== -1) lII11I.split("@").forEach(lIIIiI => {
-        llilI1.push(lIIIiI);
-      });else lII11I.indexOf("\n") !== -1 ? lII11I.split("\n").forEach(ii111i => {
-        llilI1.push(ii111i);
-      }) : llilI1.push(lII11I);
-      IlIIIl(llilI1);
-    } else console.log("\n 【" + il1li1.name + "】：未填写变量 " + ii111I);
+async function iI1l(IlII1I, IillI) {
+  return new Promise(IiIIl1 => {
+    {
+      let i111I1 = [];
+      if (IlII1I) {
+        if (IlII1I.indexOf("@") !== -1) IlII1I.split("@").forEach(I11Ili => {
+          i111I1.push(I11Ili);
+        });else IlII1I.indexOf("\n") !== -1 ? IlII1I.split("\n").forEach(li1lIl => {
+          i111I1.push(li1lIl);
+        }) : i111I1.push(IlII1I);
+        IiIIl1(i111I1);
+      } else {
+        console.log("\n 【" + Iili1I.name + "】：未填写变量 " + IillI);
+      }
+    }
   });
 }
-async function I1iiI(lIIIi1) {
-  if (!lIIIi1) return;
-  if (i1III1 > 0) {
+async function lIl1I1(iilill) {
+  if (!iilill) return;
+  if (IIlli1 > 0) {
     {
-      if (il1li1.isNode()) {
-        let ll1iII = require("./sendNotify");
-        await ll1iII.sendNotify(il1li1.name, lIIIi1);
-      } else il1li1.msg(lIIIi1);
+      if (Iili1I.isNode()) {
+        let l1IlI = require("./sendNotify");
+        await l1IlI.sendNotify(Iili1I.name, iilill);
+      } else Iili1I.msg(iilill);
     }
-  } else console.log(lIIIi1);
+  } else console.log(iilill);
 }
-function l111l1(I1ll1) {
-  I1ll1 = I1ll1 || 32;
-  let i1iII = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890",
-    IiIliI = i1iII.length,
-    IlIl11 = "";
-  for (i = 0; i < I1ll1; i++) IlIl11 += i1iII.charAt(Math.floor(Math.random() * IiIliI));
-  return IlIl11;
+function I111I1(IiliI1) {
+  IiliI1 = IiliI1 || 32;
+  let l11I = "QWERTYUIOPASDFGHJKLZXCVBNM1234567890",
+    llllli = l11I.length,
+    iiiii1 = "";
+  for (i = 0; i < IiliI1; i++) iiiii1 += l11I.charAt(Math.floor(Math.random() * llllli));
+  return iiiii1;
 }
-let l1ll1 = "";
-function llill1(ii11i) {
-  l1ll1 = ii11i;
+let iIl = "";
+function lIIi(II1il1) {
+  iIl = II1il1;
 }
-function Iill1(lIIlIl) {
-  l1ll1 === lIIlIl ? console.log("Reached mark " + lIIlIl) : console.log("Invalid mark: " + lIIlIl);
+function l11Ili(I11111) {
+  if (iIl === I11111) {
+    console.log("Reached mark " + I11111);
+  } else console.log("Invalid mark: " + I11111);
 }
-function ll1il1(iIIiIi) {
-  var IiIli1 = new Date(iIIiIi * 1000);
-  var i1iII1 = IiIli1.getFullYear();
-  var lI1li = String(IiIli1.getMonth() + 1).padStart(2, "0");
-  var ii1lII = String(IiIli1.getDate()).padStart(2, "0");
-  var lll1I1 = String(IiIli1.getHours()).padStart(2, "0");
-  var IlIl1I = String(IiIli1.getMinutes()).padStart(2, "0");
-  var I1llI = String(IiIli1.getSeconds()).padStart(2, "0");
-  var lli111 = i1iII1 + "-" + lI1li + "-" + ii1lII + " " + lll1I1 + ":" + IlIl1I + ":" + I1llI;
-  return lli111;
+function iiill(IIillI) {
+  var iiIlll = new Date(IIillI * 1000);
+  var Iiii1i = iiIlll.getFullYear();
+  var lllllI = String(iiIlll.getMonth() + 1).padStart(2, "0");
+  var Iiii1l = String(iiIlll.getDate()).padStart(2, "0");
+  var lllll1 = String(iiIlll.getHours()).padStart(2, "0");
+  var II1iil = String(iiIlll.getMinutes()).padStart(2, "0");
+  var II1iii = String(iiIlll.getSeconds()).padStart(2, "0");
+  var IiliIi = Iiii1i + "-" + lllllI + "-" + Iiii1l + " " + lllll1 + ":" + II1iil + ":" + II1iii;
+  return IiliIi;
 }
-function illi1I(I1lll, I1lli) {
-  return Math.round(Math.random() * (I1lli - I1lll) + I1lll);
+function iiI11I(I1I1l, i1II1I) {
+  return Math.round(Math.random() * (i1II1I - I1I1l) + I1I1l);
 }
-function i1IIIi() {
-  const il1I1 = new Date(),
-    lIIIll = il1I1.getHours(),
-    i11I = new Date(il1I1.getFullYear(), il1I1.getMonth(), il1I1.getDate(), lIIIll + 1, 0, 0, 0);
-  return i11I.getTime();
+function llIi1i() {
+  const ilii1l = new Date(),
+    llllii = ilii1l.getHours(),
+    l11l = new Date(ilii1l.getFullYear(), ilii1l.getMonth(), ilii1l.getDate(), llllii + 1, 0, 0, 0);
+  return l11l.getTime();
 }
-function i1IIIl() {
-  const i1iIII = new Date(),
-    i1l111 = i1iIII.getMinutes(),
-    l1Ii1I = new Date(i1iIII.getFullYear(), i1iIII.getMonth(), i1iIII.getDate(), i1iIII.getHours(), i1l111 === 0 ? 1 : i1l111 + 1, 0, 0);
-  l1Ii1I.getMinutes() === 0 && l1Ii1I.getHours() !== i1iIII.getHours() && l1Ii1I.setDate(i1iIII.getDate() + (l1Ii1I.getHours() === 0 ? 1 : 0));
-  return l1Ii1I.getTime();
+function llIi1l() {
+  const II1ill = new Date(),
+    ilili = II1ill.getMinutes(),
+    iII1iI = new Date(II1ill.getFullYear(), II1ill.getMonth(), II1ill.getDate(), II1ill.getHours(), ilili === 0 ? 1 : ilili + 1, 0, 0);
+  iII1iI.getMinutes() === 0 && iII1iI.getHours() !== II1ill.getHours() && iII1iI.setDate(II1ill.getDate() + (iII1iI.getHours() === 0 ? 1 : 0));
+  return iII1iI.getTime();
 }
-function illi11() {
+function l11i1() {
   return Math.round(new Date().getTime()).toString();
 }
-function li111l() {
-  const i1iIIl = new Date(),
-    I11III = String(i1iIIl.getFullYear()).padStart(4, "0"),
-    l1I1 = String(i1iIIl.getMonth() + 1).padStart(2, "0"),
-    IiIlli = String(i1iIIl.getDate()).padStart(2, "0"),
-    IiIlll = String(i1iIIl.getHours()).padStart(2, "0"),
-    l1Ii1l = String(i1iIIl.getMinutes()).padStart(2, "0"),
-    IIi1li = String(i1iIIl.getSeconds()).slice(0, 2);
-  return I11III + l1I1 + IiIlli + IiIlll + l1Ii1l + IIi1li;
+function lIi11I() {
+  const IiIl1l = new Date(),
+    IIilii = String(IiIl1l.getFullYear()).padStart(4, "0"),
+    iiiiiI = String(IiIl1l.getMonth() + 1).padStart(2, "0"),
+    IiIl1i = String(IiIl1l.getDate()).padStart(2, "0"),
+    IIl1li = String(IiIl1l.getHours()).padStart(2, "0"),
+    l11i = String(IiIl1l.getMinutes()).padStart(2, "0"),
+    IIl1ll = String(IiIl1l.getSeconds()).slice(0, 2);
+  return IIilii + iiiiiI + IiIl1i + IIl1li + l11i + IIl1ll;
 }
-function l111lI() {
+function iiili() {
   return Math.round(new Date().getTime() / 1000).toString();
 }
-function il1lil() {
-  let lIIIii = new Date();
-  h = lIIIii.getHours();
+function iIlIiI() {
+  let IIl1ii = new Date();
+  h = IIl1ii.getHours();
   return h;
 }
-function I1iil() {
-  let i11i = new Date();
-  m = i11i.getMinutes();
+function Il1III() {
+  let il1l = new Date();
+  m = il1l.getMinutes();
   return m;
 }
-function iiliii(i11l = 3000) {
-  return new Promise(Ilii1l => {
-    {
-      let lllli1 = {
-        "url": "https://keai.icu/apiwyy/api"
-      };
-      il1li1.get(lllli1, async (Il11ii, iI1l1I, i1llII) => {
-        try {
-          i1llII = JSON.parse(i1llII);
-          console.log("\n 【网抑云时间】: " + i1llII.content + "  by--" + i1llII.music);
-        } catch (I11l11) {
-          il1li1.logErr(I11l11, iI1l1I);
-        } finally {
-          Ilii1l();
-        }
-      }, i11l);
-    }
-  });
-}
-async function I1iii(i1llIl, i1llIi, iI1l1i = 3000) {
-  return new Promise(IIII1 => {
-    let I11IIl = i1llIl;
-    if (!i1llIi) {
-      let lliIiI = arguments.callee.toString(),
-        iI1l11 = /function\s*(\w*)/i,
-        IlliIl = iI1l11.exec(lliIiI);
-      i1llIi = IlliIl[1];
-    }
-    if (l1ii1i) {
-      console.log("\n 【debug】=============== 这是 " + i1llIi + " 请求 url ===============");
-      console.log(I11IIl);
-    }
-    il1li1.get(I11IIl, async (l1i1il, lil1l1, I1i1ll) => {
+function l11iI(Ii11ll = 3000) {
+  return new Promise(iiiili => {
+    let I11lII = {
+      "url": "https://keai.icu/apiwyy/api"
+    };
+    Iili1I.get(I11lII, async (Il111i, IIl1l1, Il111l) => {
       try {
-        if (l1ii1i) {
-          console.log("\n\n 【debug】===============这是 " + i1llIi + " 返回data==============");
-          console.log(I1i1ll);
-          console.log("======");
-          console.log(JSON.parse(I1i1ll));
-        }
-        let lIlil = JSON.parse(I1i1ll);
-        IIII1(lIlil);
-      } catch (lIlill) {
-        console.log(l1i1il, lil1l1);
+        Il111l = JSON.parse(Il111l);
+        console.log("\n 【网抑云时间】: " + Il111l.content + "  by--" + Il111l.music);
+      } catch (il1I) {
+        Iili1I.logErr(il1I, IIl1l1);
       } finally {
-        IIII1();
+        iiiili();
       }
-    }, iI1l1i);
+    }, Ii11ll);
   });
 }
-async function li111i(i1iI11, I1i1li, Il1lil = 200) {
-  return new Promise(ll1i1I => {
-    {
-      let iIi1il = i1iI11;
-      if (!I1i1li) {
-        let iIi1ii = arguments.callee.toString(),
-          i11i1l = /function\s*(\w*)/i,
-          iIlI = i11i1l.exec(iIi1ii);
-        I1i1li = iIlI[1];
-      }
-      l1ii1i && (console.log("\n 【debug】=============== 这是 " + I1i1li + " 请求 url ==============="), console.log(iIi1il));
-      il1li1.post(iIi1il, async (llil11, i11i1i, Iilill) => {
-        try {
-          {
-            l1ii1i && (console.log("\n\n 【debug】===============这是 " + I1i1li + " 返回data=============="), console.log(Iilill), console.log("======"), console.log(JSON.parse(Iilill)));
-            let ili1l1 = JSON.parse(Iilill);
-            ll1i1I(ili1l1);
-          }
-        } catch (lII1I1) {} finally {
-          ll1i1I();
+async function IIiIil(lIiiI, iiiilI, lIlIIi = 3000) {
+  return new Promise(lII1i1 => {
+    let Ii11lI = lIiiI;
+    if (!iiiilI) {
+      let I1111l = arguments.callee.toString(),
+        l111i1 = /function\s*(\w*)/i,
+        li1l1l = l111i1.exec(I1111l);
+      iiiilI = li1l1l[1];
+    }
+    ilIiii && (console.log("\n 【debug】=============== 这是 " + iiiilI + " 请求 url ==============="), console.log(Ii11lI));
+    Iili1I.get(Ii11lI, async (li1l1i, lIiil, iII1ll) => {
+      try {
+        {
+          ilIiii && (console.log("\n\n 【debug】===============这是 " + iiiilI + " 返回data=============="), console.log(iII1ll), console.log("======"), console.log(JSON.parse(iII1ll)));
+          let iliiI = JSON.parse(iII1ll);
+          lII1i1(iliiI);
         }
-      }, Il1lil);
-    }
+      } catch (lIil1) {
+        console.log(li1l1i, lIiil);
+      } finally {
+        lII1i1();
+      }
+    }, lIlIIi);
   });
 }
-function ll1ilI(...iiIil1) {
-  l1ii1i && console.log(...iiIil1);
-}
-function I1ilI(l1iliI) {
-  function l11iiI(III1l, ilIiIi) {
-    return III1l << ilIiIi | III1l >>> 32 - ilIiIi;
-  }
-  function I1Ii11(IIIili, iIllll) {
-    var IlI, III1i, ilIiIl, IlIIi1, i1lI1l;
-    ilIiIl = 2147483648 & IIIili;
-    IlIIi1 = 2147483648 & iIllll;
-    IlI = 1073741824 & IIIili;
-    III1i = 1073741824 & iIllll;
-    i1lI1l = (1073741823 & IIIili) + (1073741823 & iIllll);
-    return IlI & III1i ? 2147483648 ^ i1lI1l ^ ilIiIl ^ IlIIi1 : IlI | III1i ? 1073741824 & i1lI1l ? 3221225472 ^ i1lI1l ^ ilIiIl ^ IlIIi1 : 1073741824 ^ i1lI1l ^ ilIiIl ^ IlIIi1 : i1lI1l ^ ilIiIl ^ IlIIi1;
-  }
-  function II1(I1llli, illII, iil1I) {
-    return I1llli & illII | ~I1llli & iil1I;
-  }
-  function l11ii1(I1llll, IlI11l, IlI11i) {
-    return I1llll & IlI11i | IlI11l & ~IlI11i;
-  }
-  function IliII(I1i1I1, lliiI, l11l1I) {
-    return I1i1I1 ^ lliiI ^ l11l1I;
-  }
-  function i1I1ii(llI1l1, iIi1I1, iil11) {
-    return iIi1I1 ^ (llI1l1 | ~iil11);
-  }
-  function I11ii(l11l11, Iill1l, lilllI, i1i1I, IlI11I, l11l1i, l11l1l) {
-    l11l11 = I1Ii11(l11l11, I1Ii11(I1Ii11(II1(Iill1l, lilllI, i1i1I), IlI11I), l11l1l));
-    return I1Ii11(l11iiI(l11l11, l11l1i), Iill1l);
-  }
-  function i1I1il(il11l, IiI1ll, llii1, lillll, Ii1l, Ii1i, llI1lI) {
-    il11l = I1Ii11(il11l, I1Ii11(I1Ii11(l11ii1(IiI1ll, llii1, lillll), Ii1l), llI1lI));
-    return I1Ii11(l11iiI(il11l, Ii1i), IiI1ll);
-  }
-  function illll(i1i11, IiI1li, il11i, lillli, IlIlII, llil1, iiIIi) {
-    i1i11 = I1Ii11(i1i11, I1Ii11(I1Ii11(IliII(IiI1li, il11i, lillli), IlIlII), iiIIi));
-    return I1Ii11(l11iiI(i1i11, llil1), IiI1li);
-  }
-  function IiI1II(iiIIl, llI1iI, i1iI, lillii, IIIiiI, IiI1lI, il11I) {
-    iiIIl = I1Ii11(iiIIl, I1Ii11(I1Ii11(i1I1ii(llI1iI, i1iI, lillii), IIIiiI), il11I));
-    return I1Ii11(l11iiI(iiIIl, IiI1lI), llI1iI);
-  }
-  function Iii1I(ii1IIiiI) {
-    for (var lIlIlll1, Ilii1III = ii1IIiiI.length, iIililIl = Ilii1III + 8, IiIl11iI = (iIililIl - iIililIl % 64) / 64, lIIilI1 = 16 * (IiIl11iI + 1), iIllIli = new Array(lIIilI1 - 1), IIIl1i11 = 0, lilII11 = 0; Ilii1III > lilII11;) lIlIlll1 = (lilII11 - lilII11 % 4) / 4, IIIl1i11 = lilII11 % 4 * 8, iIllIli[lIlIlll1] = iIllIli[lIlIlll1] | ii1IIiiI.charCodeAt(lilII11) << IIIl1i11, lilII11++;
-    lIlIlll1 = (lilII11 - lilII11 % 4) / 4;
-    IIIl1i11 = lilII11 % 4 * 8;
-    iIllIli[lIlIlll1] = iIllIli[lIlIlll1] | 128 << IIIl1i11;
-    iIllIli[lIIilI1 - 2] = Ilii1III << 3;
-    iIllIli[lIIilI1 - 1] = Ilii1III >>> 29;
-    return iIllIli;
-  }
-  function I11il(iIllIll) {
-    var IIII11l1,
-      i1lill1I,
-      lIlIllii = "",
-      ii1IIiil = "";
-    for (i1lill1I = 0; 3 >= i1lill1I; i1lill1I++) IIII11l1 = iIllIll >>> 8 * i1lill1I & 255, ii1IIiil = "0" + IIII11l1.toString(16), lIlIllii += ii1IIiil.substr(ii1IIiil.length - 2, 2);
-    return lIlIllii;
-  }
-  function IIIiIi(IiIl11i1) {
-    IiIl11i1 = IiIl11i1.replace(/\r\n/g, "\n");
-    for (var ii1IIiii = "", IIII11lI = 0; IIII11lI < IiIl11i1.length; IIII11lI++) {
-      {
-        var i1lill11 = IiIl11i1.charCodeAt(IIII11lI);
-        128 > i1lill11 ? ii1IIiii += String.fromCharCode(i1lill11) : i1lill11 > 127 && 2048 > i1lill11 ? (ii1IIiii += String.fromCharCode(i1lill11 >> 6 | 192), ii1IIiii += String.fromCharCode(63 & i1lill11 | 128)) : (ii1IIiii += String.fromCharCode(i1lill11 >> 12 | 224), ii1IIiii += String.fromCharCode(i1lill11 >> 6 & 63 | 128), ii1IIiii += String.fromCharCode(63 & i1lill11 | 128));
-      }
+async function lli1ll(Il1lII, iiiill, IIl1iI = 200) {
+  return new Promise(lIll11 => {
+    let ilIl11 = Il1lII;
+    if (!iiiill) {
+      let ilIl1I = arguments.callee.toString(),
+        iiI = /function\s*(\w*)/i,
+        lIiI = iiI.exec(ilIl1I);
+      iiiill = lIiI[1];
     }
-    return ii1IIiii;
-  }
-  var IIIiIl,
-    illli,
-    IilI1I,
-    l1l1l1,
-    il1I1I,
-    III,
-    l11iii,
-    liili,
-    IiI1I1,
-    iIIi1I = [],
-    liill = 7,
-    llll = 12,
-    IilI1l = 17,
-    i1I1l1 = 22,
-    iIIi11 = 5,
-    I11l1 = 9,
-    IliI1 = 14,
-    IIIiII = 20,
-    Iii11 = 4,
-    illlI = 11,
-    IilI1i = 16,
-    l1ili1 = 23,
-    l1ill1 = 6,
-    li1I1I = 10,
-    IIi = 15,
-    ii1Ii1 = 21;
-  for (l1iliI = IIIiIi(l1iliI), iIIi1I = Iii1I(l1iliI), III = 1732584193, l11iii = 4023233417, liili = 2562383102, IiI1I1 = 271733878, IIIiIl = 0; IIIiIl < iIIi1I.length; IIIiIl += 16) illli = III, IilI1I = l11iii, l1l1l1 = liili, il1I1I = IiI1I1, III = I11ii(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 0], liill, 3614090360), IiI1I1 = I11ii(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 1], llll, 3905402710), liili = I11ii(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 2], IilI1l, 606105819), l11iii = I11ii(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 3], i1I1l1, 3250441966), III = I11ii(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 4], liill, 4118548399), IiI1I1 = I11ii(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 5], llll, 1200080426), liili = I11ii(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 6], IilI1l, 2821735955), l11iii = I11ii(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 7], i1I1l1, 4249261313), III = I11ii(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 8], liill, 1770035416), IiI1I1 = I11ii(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 9], llll, 2336552879), liili = I11ii(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 10], IilI1l, 4294925233), l11iii = I11ii(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 11], i1I1l1, 2304563134), III = I11ii(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 12], liill, 1804603682), IiI1I1 = I11ii(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 13], llll, 4254626195), liili = I11ii(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 14], IilI1l, 2792965006), l11iii = I11ii(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 15], i1I1l1, 1236535329), III = i1I1il(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 1], iIIi11, 4129170786), IiI1I1 = i1I1il(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 6], I11l1, 3225465664), liili = i1I1il(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 11], IliI1, 643717713), l11iii = i1I1il(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 0], IIIiII, 3921069994), III = i1I1il(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 5], iIIi11, 3593408605), IiI1I1 = i1I1il(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 10], I11l1, 38016083), liili = i1I1il(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 15], IliI1, 3634488961), l11iii = i1I1il(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 4], IIIiII, 3889429448), III = i1I1il(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 9], iIIi11, 568446438), IiI1I1 = i1I1il(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 14], I11l1, 3275163606), liili = i1I1il(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 3], IliI1, 4107603335), l11iii = i1I1il(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 8], IIIiII, 1163531501), III = i1I1il(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 13], iIIi11, 2850285829), IiI1I1 = i1I1il(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 2], I11l1, 4243563512), liili = i1I1il(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 7], IliI1, 1735328473), l11iii = i1I1il(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 12], IIIiII, 2368359562), III = illll(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 5], Iii11, 4294588738), IiI1I1 = illll(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 8], illlI, 2272392833), liili = illll(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 11], IilI1i, 1839030562), l11iii = illll(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 14], l1ili1, 4259657740), III = illll(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 1], Iii11, 2763975236), IiI1I1 = illll(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 4], illlI, 1272893353), liili = illll(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 7], IilI1i, 4139469664), l11iii = illll(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 10], l1ili1, 3200236656), III = illll(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 13], Iii11, 681279174), IiI1I1 = illll(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 0], illlI, 3936430074), liili = illll(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 3], IilI1i, 3572445317), l11iii = illll(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 6], l1ili1, 76029189), III = illll(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 9], Iii11, 3654602809), IiI1I1 = illll(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 12], illlI, 3873151461), liili = illll(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 15], IilI1i, 530742520), l11iii = illll(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 2], l1ili1, 3299628645), III = IiI1II(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 0], l1ill1, 4096336452), IiI1I1 = IiI1II(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 7], li1I1I, 1126891415), liili = IiI1II(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 14], IIi, 2878612391), l11iii = IiI1II(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 5], ii1Ii1, 4237533241), III = IiI1II(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 12], l1ill1, 1700485571), IiI1I1 = IiI1II(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 3], li1I1I, 2399980690), liili = IiI1II(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 10], IIi, 4293915773), l11iii = IiI1II(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 1], ii1Ii1, 2240044497), III = IiI1II(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 8], l1ill1, 1873313359), IiI1I1 = IiI1II(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 15], li1I1I, 4264355552), liili = IiI1II(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 6], IIi, 2734768916), l11iii = IiI1II(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 13], ii1Ii1, 1309151649), III = IiI1II(III, l11iii, liili, IiI1I1, iIIi1I[IIIiIl + 4], l1ill1, 4149444226), IiI1I1 = IiI1II(IiI1I1, III, l11iii, liili, iIIi1I[IIIiIl + 11], li1I1I, 3174756917), liili = IiI1II(liili, IiI1I1, III, l11iii, iIIi1I[IIIiIl + 2], IIi, 718787259), l11iii = IiI1II(l11iii, liili, IiI1I1, III, iIIi1I[IIIiIl + 9], ii1Ii1, 3951481745), III = I1Ii11(III, illli), l11iii = I1Ii11(l11iii, IilI1I), liili = I1Ii11(liili, l1l1l1), IiI1I1 = I1Ii11(IiI1I1, il1I1I);
-  var i1I1lI = I11il(III) + I11il(l11iii) + I11il(liili) + I11il(IiI1I1);
-  return i1I1lI.toLowerCase();
+    ilIiii && (console.log("\n 【debug】=============== 这是 " + iiiill + " 请求 url ==============="), console.log(ilIl11));
+    Iili1I.post(ilIl11, async (lII1lI, lIi1, lIill) => {
+      try {
+        if (ilIiii) {
+          console.log("\n\n 【debug】===============这是 " + iiiill + " 返回data==============");
+          console.log(lIill);
+          console.log("======");
+          console.log(JSON.parse(lIill));
+        }
+        let iIiI1l = JSON.parse(lIill);
+        lIll11(iIiI1l);
+      } catch (lIili) {} finally {
+        lIll11();
+      }
+    }, IIl1iI);
+  });
 }
-function iilii1(ii1IIil1, l1lIIII) {
+function IIiIii(...iIlIIi) {
+  if (ilIiii) {
+    console.log(...iIlIIi);
+  }
+}
+function liIill(ili) {
+  function ill(illi1, I1i1i1) {
+    return illi1 << I1i1i1 | illi1 >>> 32 - I1i1i1;
+  }
+  function lIli(liI11, lIlI1I) {
+    {
+      var llII1, II1l1l, li1I1l, II1l1i, iiIlI;
+      li1I1l = 2147483648 & liI11;
+      II1l1i = 2147483648 & lIlI1I;
+      llII1 = 1073741824 & liI11;
+      II1l1l = 1073741824 & lIlI1I;
+      iiIlI = (1073741823 & liI11) + (1073741823 & lIlI1I);
+      return llII1 & II1l1l ? 2147483648 ^ iiIlI ^ li1I1l ^ II1l1i : llII1 | II1l1l ? 1073741824 & iiIlI ? 3221225472 ^ iiIlI ^ li1I1l ^ II1l1i : 1073741824 ^ iiIlI ^ li1I1l ^ II1l1i : iiIlI ^ li1I1l ^ II1l1i;
+    }
+  }
+  function ilii1I(ii1Ili, liI1l, liI1i) {
+    return ii1Ili & liI1l | ~ii1Ili & liI1i;
+  }
+  function Ii1i1(iiIii, IiI1Ii, iiIil) {
+    return iiIii & iiIil | IiI1Ii & ~iiIil;
+  }
+  function lIll(IilI11, llili, iiII1) {
+    return IilI11 ^ llili ^ iiII1;
+  }
+  function iiiIi(llill, iI1I11, l11111) {
+    return iI1I11 ^ (llill | ~l11111);
+  }
+  function ilii11(I11I1I, il1IIl, l1111i, il1IIi, i1II, iI1I1I, I111I) {
+    I11I1I = lIli(I11I1I, lIli(lIli(ilii1I(il1IIl, l1111i, il1IIi), i1II), I111I));
+    return lIli(ill(I11I1I, iI1I1I), il1IIl);
+  }
+  function iiiIl(i1Ili1, l1111l, llI1ll, I111i, iili11, llI1li, Illii1) {
+    i1Ili1 = lIli(i1Ili1, lIli(lIli(Ii1i1(l1111l, llI1ll, I111i), iili11), Illii1));
+    return lIli(ill(i1Ili1, llI1li), l1111l);
+  }
+  function iiIliI(I111l, il1l11, i1IliI, lI1I1, I1lI1, l11lI1, lI1II) {
+    I111l = lIli(I111l, lIli(lIli(lIll(il1l11, i1IliI, lI1I1), I1lI1), lI1II));
+    return lIli(ill(I111l, l11lI1), il1l11);
+  }
+  function liIiIl(i1Ilil, llI11, IlIIl1, IliiIl, iili1i, l11lII, IliiIi) {
+    i1Ilil = lIli(i1Ilil, lIli(lIli(iiiIi(llI11, IlIIl1, IliiIl), iili1i), IliiIi));
+    return lIli(ill(i1Ilil, l11lII), llI11);
+  }
+  function lII11(IlIIil) {
+    for (var lI1Il, IlIIii = IlIIil.length, lI1Ii = IlIIii + 8, ilIiI1 = (lI1Ii - lI1Ii % 64) / 64, lii1I1 = 16 * (ilIiI1 + 1), il1l1l = new Array(lii1I1 - 1), ii1li1 = 0, iili1I = 0; IlIIii > iili1I;) lI1Il = (iili1I - iili1I % 4) / 4, ii1li1 = iili1I % 4 * 8, il1l1l[lI1Il] = il1l1l[lI1Il] | IlIIil.charCodeAt(iili1I) << ii1li1, iili1I++;
+    lI1Il = (iili1I - iili1I % 4) / 4;
+    ii1li1 = iili1I % 4 * 8;
+    il1l1l[lI1Il] = il1l1l[lI1Il] | 128 << ii1li1;
+    il1l1l[lii1I1 - 2] = IlIIii << 3;
+    il1l1l[lii1I1 - 1] = IlIIii >>> 29;
+    return il1l1l;
+  }
+  function illiI1(i1Ill1) {
+    {
+      var l11lIi,
+        l11lIl,
+        ii1liI = "",
+        IliiII = "";
+      for (l11lIl = 0; 3 >= l11lIl; l11lIl++) l11lIi = i1Ill1 >>> 8 * l11lIl & 255, IliiII = "0" + l11lIi.toString(16), ii1liI += IliiII.substr(IliiII.length - 2, 2);
+      return ii1liI;
+    }
+  }
+  function iIll1i(I11I1l) {
+    I11I1l = I11I1l.replace(/\r\n/g, "\n");
+    for (var I11I1i = "", llI1i = 0; llI1i < I11I1l.length; llI1i++) {
+      var IlIIli = I11I1l.charCodeAt(llI1i);
+      128 > IlIIli ? I11I1i += String.fromCharCode(IlIIli) : IlIIli > 127 && 2048 > IlIIli ? (I11I1i += String.fromCharCode(IlIIli >> 6 | 192), I11I1i += String.fromCharCode(63 & IlIIli | 128)) : (I11I1i += String.fromCharCode(IlIIli >> 12 | 224), I11I1i += String.fromCharCode(IlIIli >> 6 & 63 | 128), I11I1i += String.fromCharCode(63 & IlIIli | 128));
+    }
+    return I11I1i;
+  }
+  var iIll1l,
+    iIIii,
+    ilIl1l,
+    Ii1l1,
+    Il1IlI,
+    l11Ii,
+    iIll11,
+    IIilll,
+    iIIil,
+    lli1Ii = [],
+    lli1Il = 7,
+    l11Il = 12,
+    IIilli = 17,
+    l1III1 = 22,
+    lII1I = 5,
+    iiiII = 9,
+    iiIlil = 14,
+    il11il = 20,
+    iiIlii = 4,
+    II1I11 = 11,
+    il11ii = 16,
+    Il1Il1 = 23,
+    iIll1I = 6,
+    iIIiI = 10,
+    Il1Ill = 15,
+    Ii1il = 21;
+  for (ili = iIll1i(ili), lli1Ii = lII11(ili), l11Ii = 1732584193, iIll11 = 4023233417, IIilll = 2562383102, iIIil = 271733878, iIll1l = 0; iIll1l < lli1Ii.length; iIll1l += 16) iIIii = l11Ii, ilIl1l = iIll11, Ii1l1 = IIilll, Il1IlI = iIIil, l11Ii = ilii11(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 0], lli1Il, 3614090360), iIIil = ilii11(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 1], l11Il, 3905402710), IIilll = ilii11(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 2], IIilli, 606105819), iIll11 = ilii11(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 3], l1III1, 3250441966), l11Ii = ilii11(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 4], lli1Il, 4118548399), iIIil = ilii11(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 5], l11Il, 1200080426), IIilll = ilii11(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 6], IIilli, 2821735955), iIll11 = ilii11(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 7], l1III1, 4249261313), l11Ii = ilii11(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 8], lli1Il, 1770035416), iIIil = ilii11(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 9], l11Il, 2336552879), IIilll = ilii11(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 10], IIilli, 4294925233), iIll11 = ilii11(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 11], l1III1, 2304563134), l11Ii = ilii11(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 12], lli1Il, 1804603682), iIIil = ilii11(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 13], l11Il, 4254626195), IIilll = ilii11(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 14], IIilli, 2792965006), iIll11 = ilii11(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 15], l1III1, 1236535329), l11Ii = iiiIl(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 1], lII1I, 4129170786), iIIil = iiiIl(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 6], iiiII, 3225465664), IIilll = iiiIl(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 11], iiIlil, 643717713), iIll11 = iiiIl(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 0], il11il, 3921069994), l11Ii = iiiIl(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 5], lII1I, 3593408605), iIIil = iiiIl(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 10], iiiII, 38016083), IIilll = iiiIl(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 15], iiIlil, 3634488961), iIll11 = iiiIl(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 4], il11il, 3889429448), l11Ii = iiiIl(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 9], lII1I, 568446438), iIIil = iiiIl(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 14], iiiII, 3275163606), IIilll = iiiIl(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 3], iiIlil, 4107603335), iIll11 = iiiIl(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 8], il11il, 1163531501), l11Ii = iiiIl(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 13], lII1I, 2850285829), iIIil = iiiIl(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 2], iiiII, 4243563512), IIilll = iiiIl(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 7], iiIlil, 1735328473), iIll11 = iiiIl(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 12], il11il, 2368359562), l11Ii = iiIliI(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 5], iiIlii, 4294588738), iIIil = iiIliI(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 8], II1I11, 2272392833), IIilll = iiIliI(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 11], il11ii, 1839030562), iIll11 = iiIliI(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 14], Il1Il1, 4259657740), l11Ii = iiIliI(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 1], iiIlii, 2763975236), iIIil = iiIliI(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 4], II1I11, 1272893353), IIilll = iiIliI(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 7], il11ii, 4139469664), iIll11 = iiIliI(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 10], Il1Il1, 3200236656), l11Ii = iiIliI(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 13], iiIlii, 681279174), iIIil = iiIliI(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 0], II1I11, 3936430074), IIilll = iiIliI(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 3], il11ii, 3572445317), iIll11 = iiIliI(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 6], Il1Il1, 76029189), l11Ii = iiIliI(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 9], iiIlii, 3654602809), iIIil = iiIliI(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 12], II1I11, 3873151461), IIilll = iiIliI(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 15], il11ii, 530742520), iIll11 = iiIliI(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 2], Il1Il1, 3299628645), l11Ii = liIiIl(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 0], iIll1I, 4096336452), iIIil = liIiIl(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 7], iIIiI, 1126891415), IIilll = liIiIl(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 14], Il1Ill, 2878612391), iIll11 = liIiIl(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 5], Ii1il, 4237533241), l11Ii = liIiIl(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 12], iIll1I, 1700485571), iIIil = liIiIl(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 3], iIIiI, 2399980690), IIilll = liIiIl(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 10], Il1Ill, 4293915773), iIll11 = liIiIl(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 1], Ii1il, 2240044497), l11Ii = liIiIl(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 8], iIll1I, 1873313359), iIIil = liIiIl(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 15], iIIiI, 4264355552), IIilll = liIiIl(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 6], Il1Ill, 2734768916), iIll11 = liIiIl(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 13], Ii1il, 1309151649), l11Ii = liIiIl(l11Ii, iIll11, IIilll, iIIil, lli1Ii[iIll1l + 4], iIll1I, 4149444226), iIIil = liIiIl(iIIil, l11Ii, iIll11, IIilll, lli1Ii[iIll1l + 11], iIIiI, 3174756917), IIilll = liIiIl(IIilll, iIIil, l11Ii, iIll11, lli1Ii[iIll1l + 2], Il1Ill, 718787259), iIll11 = liIiIl(iIll11, IIilll, iIIil, l11Ii, lli1Ii[iIll1l + 9], Ii1il, 3951481745), l11Ii = lIli(l11Ii, iIIii), iIll11 = lIli(iIll11, ilIl1l), IIilll = lIli(IIilll, Ii1l1), iIIil = lIli(iIIil, Il1IlI);
+  var Il1Ili = illiI1(l11Ii) + illiI1(iIll11) + illiI1(IIilll) + illiI1(iIIil);
+  return Il1Ili.toLowerCase();
+}
+function lli1li(IlIIll, i1IllI) {
   "undefined" != typeof process && JSON.stringify(process.env).indexOf("GITHUB") > -1 && process.exit(0);
-  class IIII11li {
-    constructor(liIi1IIl) {
-      this.env = liIi1IIl;
+  class ii1lii {
+    constructor(II111I) {
+      this.env = II111I;
     }
-    ["send"](liIi1IIi, iIllIiI = "GET") {
-      {
-        liIi1IIi = "string" == typeof liIi1IIi ? {
-          "url": liIi1IIi
-        } : liIi1IIi;
-        let IliIIIl1 = this.get;
-        "POST" === iIllIiI && (IliIIIl1 = this.post);
-        return new Promise((iIIii1II, l1I11lll) => {
-          IliIIIl1.call(this, liIi1IIi, (l1I11lli, lIlIlli1, IlI11I11) => {
-            l1I11lli ? l1I11lll(l1I11lli) : iIIii1II(lIlIlli1);
-          });
+    ["send"](IIii1, I11iii = "GET") {
+      IIii1 = "string" == typeof IIii1 ? {
+        "url": IIii1
+      } : IIii1;
+      let I11iil = this.get;
+      "POST" === I11iii && (I11iil = this.post);
+      return new Promise((iIl1li, iIilil) => {
+        I11iil.call(this, IIii1, (iIl1ll, lliII1, IiiIII) => {
+          iIl1ll ? iIilil(iIl1ll) : iIl1li(lliII1);
         });
-      }
+      });
     }
-    ["get"](iill11iI) {
-      return this.send.call(this.env, iill11iI);
+    ["get"](lIIl1I) {
+      return this.send.call(this.env, lIIl1I);
     }
-    ["post"](iIIii1Ii) {
-      return this.send.call(this.env, iIIii1Ii, "POST");
+    ["post"](IllilI) {
+      return this.send.call(this.env, IllilI, "POST");
     }
   }
   return new class {
-    constructor(l1I11llI, IliIIIii) {
-      this.name = l1I11llI;
-      this.http = new IIII11li(this);
+    constructor(lIIl11, Illil1) {
+      this.name = lIIl11;
+      this.http = new ii1lii(this);
       this.data = null;
       this.dataFile = "box.dat";
       this.logs = [];
@@ -921,7 +775,7 @@ function iilii1(ii1IIil1, l1lIIII) {
       this.isNeedRewrite = false;
       this.logSeparator = "\n";
       this.startTime = new Date().getTime();
-      Object.assign(this, IliIIIii);
+      Object.assign(this, Illil1);
       this.log("", "🔔" + this.name + ", 开始!");
     }
     ["isNode"]() {
@@ -936,353 +790,367 @@ function iilii1(ii1IIil1, l1lIIII) {
     ["isLoon"]() {
       return "undefined" != typeof $loon;
     }
-    ["toObj"](il1li1ii, il1iIili = null) {
+    ["toObj"](II1IlI, lI11ll = null) {
       try {
-        return JSON.parse(il1li1ii);
+        return JSON.parse(II1IlI);
       } catch {
-        return il1iIili;
+        return lI11ll;
       }
     }
-    ["toStr"](iill11ii, il1iIill = null) {
+    ["toStr"](lIlII, lI11li = null) {
       try {
-        return JSON.stringify(iill11ii);
+        return JSON.stringify(lIlII);
       } catch {
-        return il1iIill;
+        return lI11li;
       }
     }
-    ["getjson"](I1iiiIl1, iill11lI) {
+    ["getjson"](i1liiI, lIlIi) {
       {
-        let lI1iiiil = iill11lI;
-        const l11Il1II = this.getdata(I1iiiIl1);
-        if (l11Il1II) try {
-          lI1iiiil = JSON.parse(this.getdata(I1iiiIl1));
+        let lI11lI = lIlIi;
+        const IIilI = this.getdata(i1liiI);
+        if (IIilI) try {
+          lI11lI = JSON.parse(this.getdata(i1liiI));
         } catch {}
-        return lI1iiiil;
+        return lI11lI;
       }
     }
-    ["setjson"](lI1iiiii, iIii1il) {
+    ["setjson"](I1i1Il, lI11il) {
       try {
-        return this.setdata(JSON.stringify(lI1iiiii), iIii1il);
+        return this.setdata(JSON.stringify(I1i1Il), lI11il);
       } catch {
         return false;
       }
     }
-    ["getScript"](iill11l1) {
-      return new Promise(llIiiiI1 => {
+    ["getScript"](lii11I) {
+      return new Promise(iiIII1 => {
         this.get({
-          "url": iill11l1
-        }, (i1111I1l, iiliiiii, IillliIl) => llIiiiI1(IillliIl));
+          "url": lii11I
+        }, (li1iII, lIIi1, I1i1II) => iiIII1(I1i1II));
       });
     }
-    ["runScript"](iill11ll, iIi1Ii1I) {
-      return new Promise(I11il1l1 => {
-        {
-          let lliI1I1i = this.getdata("@chavy_boxjs_userCfgs.httpapi");
-          lliI1I1i = lliI1I1i ? lliI1I1i.replace(/\n/g, "").trim() : lliI1I1i;
-          let lliI1I1l = this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");
-          lliI1I1l = lliI1I1l ? 1 * lliI1I1l : 20;
-          lliI1I1l = iIi1Ii1I && iIi1Ii1I.timeout ? iIi1Ii1I.timeout : lliI1I1l;
-          const [I1iiiIi1, I11i1iiI] = lliI1I1i.split("@"),
-            Ili1i1l1 = {
-              "url": "http://" + I11i1iiI + "/v1/scripting/evaluate",
-              "body": {
-                "script_text": iill11ll,
-                "mock_type": "cron",
-                "timeout": lliI1I1l
-              },
-              "headers": {
-                "Accept": "*/*"
-              }
-            };
-          this.post(Ili1i1l1, (IlI1ill1, iIi1Ii1i, iIi1Ii1l) => I11il1l1(iIi1Ii1l));
-        }
-      }).catch(IIl11iIi => this.logErr(IIl11iIi));
+    ["runScript"](l1IiIi, lil1II) {
+      return new Promise(l1IiIl => {
+        let IIil1 = this.getdata("@chavy_boxjs_userCfgs.httpapi");
+        IIil1 = IIil1 ? IIil1.replace(/\n/g, "").trim() : IIil1;
+        let iIi1II = this.getdata("@chavy_boxjs_userCfgs.httpapi_timeout");
+        iIi1II = iIi1II ? 1 * iIi1II : 20;
+        iIi1II = lil1II && lil1II.timeout ? lil1II.timeout : iIi1II;
+        const [Iill11, lliili] = IIil1.split("@"),
+          Iill1I = {
+            "url": "http://" + lliili + "/v1/scripting/evaluate",
+            "body": {
+              "script_text": l1IiIi,
+              "mock_type": "cron",
+              "timeout": iIi1II
+            },
+            "headers": {
+              "Accept": "*/*"
+            }
+          };
+        this.post(Iill1I, (lI1, II1Ill, iiIIII) => l1IiIl(iiIIII));
+      }).catch(li1iI1 => this.logErr(li1iI1));
     }
     ["loaddata"]() {
-      if (!this.isNode()) return {};
       {
-        this.fs = this.fs ? this.fs : require("fs");
-        this.path = this.path ? this.path : require("path");
-        const iiliiilI = this.path.resolve(this.dataFile),
-          IlliiIiI = this.path.resolve(process.cwd(), this.dataFile),
-          IlI1ili1 = this.fs.existsSync(iiliiilI),
-          IlI1iliI = !IlI1ili1 && this.fs.existsSync(IlliiIiI);
-        if (!IlI1ili1 && !IlI1iliI) return {};
+        if (!this.isNode()) return {};
         {
           {
-            const iIlliI1i = IlI1ili1 ? iiliiilI : IlliiIiI;
-            try {
-              return JSON.parse(this.fs.readFileSync(iIlliI1i));
-            } catch (iIlliI1l) {
-              return {};
+            this.fs = this.fs ? this.fs : require("fs");
+            this.path = this.path ? this.path : require("path");
+            const i1lil1 = this.path.resolve(this.dataFile),
+              ilIli = this.path.resolve(process.cwd(), this.dataFile),
+              lI11ii = this.fs.existsSync(i1lil1),
+              lii11i = !lI11ii && this.fs.existsSync(ilIli);
+            if (!lI11ii && !lii11i) return {};
+            {
+              const ilIll = lI11ii ? i1lil1 : ilIli;
+              try {
+                return JSON.parse(this.fs.readFileSync(ilIll));
+              } catch (I1l1i1) {
+                return {};
+              }
             }
           }
         }
       }
     }
     ["writedata"]() {
-      {
-        if (this.isNode()) {
+      if (this.isNode()) {
+        {
           this.fs = this.fs ? this.fs : require("fs");
           this.path = this.path ? this.path : require("path");
-          const IIl11iI1 = this.path.resolve(this.dataFile),
-            ii1il11l = this.path.resolve(process.cwd(), this.dataFile),
-            IlliiIil = this.fs.existsSync(IIl11iI1),
-            IlliiIii = !IlliiIil && this.fs.existsSync(ii1il11l),
-            l1iIiIIl = JSON.stringify(this.data);
-          IlliiIil ? this.fs.writeFileSync(IIl11iI1, l1iIiIIl) : IlliiIii ? this.fs.writeFileSync(ii1il11l, l1iIiIIl) : this.fs.writeFileSync(IIl11iI1, l1iIiIIl);
+          const iiIIIi = this.path.resolve(this.dataFile),
+            lIIiI = this.path.resolve(process.cwd(), this.dataFile),
+            ilIlI = this.fs.existsSync(iiIIIi),
+            lIii11 = !ilIlI && this.fs.existsSync(lIIiI),
+            lIliI1 = JSON.stringify(this.data);
+          ilIlI ? this.fs.writeFileSync(iiIIIi, lIliI1) : lIii11 ? this.fs.writeFileSync(lIIiI, lIliI1) : this.fs.writeFileSync(iiIIIi, lIliI1);
         }
       }
     }
-    ["lodash_get"](l1li1Ill, iIllIllI, IilIl1iI) {
-      const i111illl = iIllIllI.replace(/\[(\d+)\]/g, ".$1").split(".");
-      let il111lIl = l1li1Ill;
-      for (const i111illi of i111illl) if (il111lIl = Object(il111lIl)[i111illi], undefined === il111lIl) return IilIl1iI;
-      return il111lIl;
-    }
-    ["lodash_set"](l1i111ll, I11IIill, l1i111li) {
-      return Object(l1i111ll) !== l1i111ll ? l1i111ll : (Array.isArray(I11IIill) || (I11IIill = I11IIill.toString().match(/[^.[\]]+/g) || []), I11IIill.slice(0, -1).reduce((l1li1Ili, i111illI, i1II11I1) => Object(l1li1Ili[i111illI]) === l1li1Ili[i111illI] ? l1li1Ili[i111illI] : l1li1Ili[i111illI] = Math.abs(I11IIill[i1II11I1 + 1]) >> 0 == +I11IIill[i1II11I1 + 1] ? [] : {}, l1i111ll)[I11IIill[I11IIill.length - 1]] = l1i111li, l1i111ll);
-    }
-    ["getdata"](iIllIll1) {
+    ["lodash_get"](IIili, liiIi1, lIi) {
       {
-        let l1li1IlI = this.getval(iIllIll1);
-        if (/^@/.test(iIllIll1)) {
+        const liiIiI = liiIi1.replace(/\[(\d+)\]/g, ".$1").split(".");
+        let li1iIi = IIili;
+        for (const liilII of liiIiI) if (li1iIi = Object(li1iIi)[liilII], undefined === li1iIi) return lIi;
+        return li1iIi;
+      }
+    }
+    ["lodash_set"](lIIl1, lllII1, iiIl1I) {
+      return Object(lIIl1) !== lIIl1 ? lIIl1 : (Array.isArray(lllII1) || (lllII1 = lllII1.toString().match(/[^.[\]]+/g) || []), lllII1.slice(0, -1).reduce((il111I, lliI11, ilIil) => Object(il111I[lliI11]) === il111I[lliI11] ? il111I[lliI11] : il111I[lliI11] = Math.abs(lllII1[ilIil + 1]) >> 0 == +lllII1[ilIil + 1] ? [] : {}, lIIl1)[lllII1[lllII1.length - 1]] = iiIl1I, lIIl1);
+    }
+    ["getdata"](lllIII) {
+      let lIii1i = this.getval(lllIII);
+      if (/^@/.test(lllIII)) {
+        const [, iiIl11, II1Iii] = /^@(.*?)\.(.*?)$/.exec(lllIII),
+          II1Iil = iiIl11 ? this.getval(iiIl11) : "";
+        if (II1Iil) try {
+          const lliI1I = JSON.parse(II1Iil);
+          lIii1i = lliI1I ? this.lodash_get(lliI1I, II1Iii, "") : lIii1i;
+        } catch (il1111) {
+          lIii1i = "";
+        }
+      }
+      return lIii1i;
+    }
+    ["setdata"](lIliIi, lIii1l) {
+      let lIliIl = false;
+      if (/^@/.test(lIii1l)) {
+        const [, IiiI11, liiIl] = /^@(.*?)\.(.*?)$/.exec(lIii1l),
+          iiIl1i = this.getval(IiiI11),
+          II1Ii1 = IiiI11 ? "null" === iiIl1i ? null : iiIl1i || "{}" : "{}";
+        try {
           {
-            const [, I1I1I1i, I1I1I1l] = /^@(.*?)\.(.*?)$/.exec(iIllIll1),
-              il111lIi = I1I1I1i ? this.getval(I1I1I1i) : "";
-            if (il111lIi) try {
-              const IilIl1l1 = JSON.parse(il111lIi);
-              l1li1IlI = IilIl1l1 ? this.lodash_get(IilIl1l1, I1I1I1l, "") : l1li1IlI;
-            } catch (iIllIlii) {
-              l1li1IlI = "";
-            }
+            const IilII1 = JSON.parse(II1Ii1);
+            this.lodash_set(IilII1, liiIl, lIliIi);
+            lIliIl = this.setval(JSON.stringify(IilII1), IiiI11);
+          }
+        } catch (Ii1) {
+          {
+            const II1IiI = {};
+            this.lodash_set(II1IiI, liiIl, lIliIi);
+            lIliIl = this.setval(JSON.stringify(II1IiI), IiiI11);
           }
         }
-        return l1li1IlI;
-      }
+      } else lIliIl = this.setval(lIliIi, lIii1l);
+      return lIliIl;
     }
-    ["setdata"](iIllIlil, I1I1I1I) {
-      let IilI1ii1 = false;
-      if (/^@/.test(I1I1I1I)) {
-        const [, i1II11II, IilIl1lI] = /^@(.*?)\.(.*?)$/.exec(I1I1I1I),
-          il111lII = this.getval(i1II11II),
-          i111ill1 = i1II11II ? "null" === il111lII ? null : il111lII || "{}" : "{}";
-        try {
-          const i111ilil = JSON.parse(i111ill1);
-          this.lodash_set(i111ilil, IilIl1lI, iIllIlil);
-          IilI1ii1 = this.setval(JSON.stringify(i111ilil), i1II11II);
-        } catch (iIllIliI) {
-          const IilIl1il = {};
-          this.lodash_set(IilIl1il, IilIl1lI, iIllIlil);
-          IilI1ii1 = this.setval(JSON.stringify(IilIl1il), i1II11II);
-        }
-      } else IilI1ii1 = this.setval(iIllIlil, I1I1I1I);
-      return IilI1ii1;
+    ["getval"](IilIII) {
+      return this.isSurge() || this.isLoon() ? $persistentStore.read(IilIII) : this.isQuanX() ? $prefs.valueForKey(IilIII) : this.isNode() ? (this.data = this.loaddata(), this.data[IilIII]) : this.data && this.data[IilIII] || null;
     }
-    ["getval"](IilIl1ii) {
-      return this.isSurge() || this.isLoon() ? $persistentStore.read(IilIl1ii) : this.isQuanX() ? $prefs.valueForKey(IilIl1ii) : this.isNode() ? (this.data = this.loaddata(), this.data[IilIl1ii]) : this.data && this.data[IilIl1ii] || null;
+    ["setval"](lIIlI, ilIiI) {
+      return this.isSurge() || this.isLoon() ? $persistentStore.write(lIIlI, ilIiI) : this.isQuanX() ? $prefs.setValueForKey(lIIlI, ilIiI) : this.isNode() ? (this.data = this.loaddata(), this.data[ilIiI] = lIIlI, this.writedata(), true) : this.data && this.data[ilIiI] || null;
     }
-    ["setval"](i1II11Ii, I1I1I11) {
-      return this.isSurge() || this.isLoon() ? $persistentStore.write(i1II11Ii, I1I1I11) : this.isQuanX() ? $prefs.setValueForKey(i1II11Ii, I1I1I11) : this.isNode() ? (this.data = this.loaddata(), this.data[I1I1I11] = i1II11Ii, this.writedata(), true) : this.data && this.data[I1I1I11] || null;
-    }
-    ["initGotEnv"](IilI1iiI) {
+    ["initGotEnv"](liiIl1) {
       this.got = this.got ? this.got : require("got");
       this.cktough = this.cktough ? this.cktough : require("tough-cookie");
       this.ckjar = this.ckjar ? this.ckjar : new this.cktough.CookieJar();
-      IilI1iiI && (IilI1iiI.headers = IilI1iiI.headers ? IilI1iiI.headers : {}, undefined === IilI1iiI.headers.Cookie && undefined === IilI1iiI.cookieJar && (IilI1iiI.cookieJar = this.ckjar));
+      liiIl1 && (liiIl1.headers = liiIl1.headers ? liiIl1.headers : {}, undefined === liiIl1.headers.Cookie && undefined === liiIl1.cookieJar && (liiIl1.cookieJar = this.ckjar));
     }
-    ["get"](lliIilii, lliIilil = () => {}) {
-      lliIilii.headers && (delete lliIilii.headers["Content-Type"], delete lliIilii.headers["Content-Length"]);
-      this.isSurge() || this.isLoon() ? (this.isSurge() && this.isNeedRewrite && (lliIilii.headers = lliIilii.headers || {}, Object.assign(lliIilii.headers, {
+    ["get"](IIIilI, III1I = () => {}) {
+      IIIilI.headers && (delete IIIilI.headers["Content-Type"], delete IIIilI.headers["Content-Length"]);
+      this.isSurge() || this.isLoon() ? (this.isSurge() && this.isNeedRewrite && (IIIilI.headers = IIIilI.headers || {}, Object.assign(IIIilI.headers, {
         "X-Surge-Skip-Scripting": false
-      })), $httpClient.get(lliIilii, (ii1IIili, l11I1iIi, iIii1ll) => {
-        !ii1IIili && l11I1iIi && (l11I1iIi.body = iIii1ll, l11I1iIi.statusCode = l11I1iIi.status);
-        lliIilil(ii1IIili, l11I1iIi, iIii1ll);
-      })) : this.isQuanX() ? (this.isNeedRewrite && (lliIilii.opts = lliIilii.opts || {}, Object.assign(lliIilii.opts, {
+      })), $httpClient.get(IIIilI, (l11IIi, llll1i, llll1l) => {
+        !l11IIi && llll1i && (llll1i.body = llll1l, llll1i.statusCode = llll1i.status);
+        III1I(l11IIi, llll1i, llll1l);
+      })) : this.isQuanX() ? (this.isNeedRewrite && (IIIilI.opts = IIIilI.opts || {}, Object.assign(IIIilI.opts, {
         "hints": false
-      })), $task.fetch(lliIilii).then(lliIill1 => {
+      })), $task.fetch(IIIilI).then(llI1i1 => {
         {
           const {
-            statusCode: iilil1l,
-            statusCode: llliI11l,
-            headers: iIii1li,
-            body: IilI1il1
-          } = lliIill1;
-          lliIilil(null, {
-            "status": iilil1l,
-            "statusCode": llliI11l,
-            "headers": iIii1li,
-            "body": IilI1il1
-          }, IilI1il1);
+            statusCode: i1I1Ii,
+            statusCode: I11Ii,
+            headers: i1I1Il,
+            body: IiI1iI
+          } = llI1i1;
+          III1I(null, {
+            "status": i1I1Ii,
+            "statusCode": I11Ii,
+            "headers": i1I1Il,
+            "body": IiI1iI
+          }, IiI1iI);
         }
-      }, iIIllIII => lliIilil(iIIllIII))) : this.isNode() && (this.initGotEnv(lliIilii), this.got(lliIilii).on("redirect", (iilil1i, IilIl1li) => {
+      }, ii1lll => III1I(ii1lll))) : this.isNode() && (this.initGotEnv(IIIilI), this.got(IIIilI).on("redirect", (lilliI, liiIli) => {
         try {
-          if (iilil1i.headers["set-cookie"]) {
-            const i111ili1 = iilil1i.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
-            i111ili1 && this.ckjar.setCookieSync(i111ili1, null);
-            IilIl1li.cookieJar = this.ckjar;
+          if (lilliI.headers["set-cookie"]) {
+            {
+              const IiI1i1 = lilliI.headers["set-cookie"].map(this.cktough.Cookie.parse).toString();
+              IiI1i1 && this.ckjar.setCookieSync(IiI1i1, null);
+              liiIli.cookieJar = this.ckjar;
+            }
           }
-        } catch (lliIillI) {
-          this.logErr(lliIillI);
+        } catch (l11IIl) {
+          this.logErr(l11IIl);
         }
-      }).then(II111II1 => {
+      }).then(IliiI1 => {
         const {
-          statusCode: lIIilIi,
-          statusCode: I11i1ilI,
-          headers: Il1Iil1l,
-          body: iIii1lI
-        } = II111II1;
-        lliIilil(null, {
-          "status": lIIilIi,
-          "statusCode": I11i1ilI,
-          "headers": Il1Iil1l,
-          "body": iIii1lI
-        }, iIii1lI);
-      }, l11I1iI1 => {
+          statusCode: III1l,
+          statusCode: ilIiIi,
+          headers: liiIil,
+          body: IIIili
+        } = IliiI1;
+        III1I(null, {
+          "status": III1l,
+          "statusCode": ilIiIi,
+          "headers": liiIil,
+          "body": IIIili
+        }, IIIili);
+      }, iIllll => {
         {
           const {
-            message: lIIilIl,
-            response: Il1Iil1i
-          } = l11I1iI1;
-          lliIilil(lIIilIl, Il1Iil1i, Il1Iil1i && Il1Iil1i.body);
+            message: IlI,
+            response: III1i
+          } = iIllll;
+          III1I(IlI, III1i, III1i && III1i.body);
         }
       }));
     }
-    ["post"](lliIilll, l11Il1Il = () => {}) {
-      if (lliIilll.body && lliIilll.headers && !lliIilll.headers["Content-Type"] && (lliIilll.headers["Content-Type"] = "application/json;charset=utf-8"), lliIilll.headers && delete lliIilll.headers["Content-Length"], this.isSurge() || this.isLoon()) this.isSurge() && this.isNeedRewrite && (lliIilll.headers = lliIilll.headers || {}, Object.assign(lliIilll.headers, {
+    ["post"](iil1I, I1llll = () => {}) {
+      if (iil1I.body && iil1I.headers && !iil1I.headers["Content-Type"] && (iil1I.headers["Content-Type"] = "application/json"), iil1I.headers && delete iil1I.headers["Content-Length"], this.isSurge() || this.isLoon()) this.isSurge() && this.isNeedRewrite && (iil1I.headers = iil1I.headers || {}, Object.assign(iil1I.headers, {
         "X-Surge-Skip-Scripting": false
-      })), $httpClient.post(lliIilll, (IIII11Ii, ii1IIiI1, liI1i1ii) => {
-        !IIII11Ii && ii1IIiI1 && (ii1IIiI1.body = liI1i1ii, ii1IIiI1.statusCode = ii1IIiI1.status);
-        l11Il1Il(IIII11Ii, ii1IIiI1, liI1i1ii);
+      })), $httpClient.post(iil1I, (il11i, lillli, IlIlII) => {
+        !il11i && lillli && (lillli.body = IlIlII, lillli.statusCode = lillli.status);
+        I1llll(il11i, lillli, IlIlII);
       });else {
-        if (this.isQuanX()) lliIilll.method = "POST", this.isNeedRewrite && (lliIilll.opts = lliIilll.opts || {}, Object.assign(lliIilll.opts, {
+        if (this.isQuanX()) iil1I.method = "POST", this.isNeedRewrite && (iil1I.opts = iil1I.opts || {}, Object.assign(iil1I.opts, {
           "hints": false
-        })), $task.fetch(lliIilll).then(liI1i1il => {
+        })), $task.fetch(iil1I).then(llil1 => {
           const {
-            statusCode: lIlIllII,
-            statusCode: l1lIIll,
-            headers: l1lIIli,
-            body: ii1IIiII
-          } = liI1i1il;
-          l11Il1Il(null, {
-            "status": lIlIllII,
-            "statusCode": l1lIIll,
-            "headers": l1lIIli,
-            "body": ii1IIiII
-          }, ii1IIiII);
-        }, Ilii1IiI => l11Il1Il(Ilii1IiI));else {
+            statusCode: iiIIi,
+            statusCode: iiIIl,
+            headers: llI1iI,
+            body: i1iI
+          } = llil1;
+          I1llll(null, {
+            "status": iiIIi,
+            "statusCode": iiIIl,
+            "headers": llI1iI,
+            "body": i1iI
+          }, i1iI);
+        }, lillii => I1llll(lillii));else {
           if (this.isNode()) {
-            this.initGotEnv(lliIilll);
-            const {
-              url: I1IilII,
-              ...lIIili1
-            } = lliIilll;
-            this.got.post(I1IilII, lIIili1).then(liIi1I1l => {
-              {
-                const {
-                  statusCode: iil1I1i,
-                  statusCode: lll111i1,
-                  headers: iil1I1l,
-                  body: iIililil
-                } = liIi1I1l;
-                l11Il1Il(null, {
-                  "status": iil1I1i,
-                  "statusCode": lll111i1,
-                  "headers": iil1I1l,
-                  "body": iIililil
-                }, iIililil);
-              }
-            }, iliIll1I => {
-              {
-                const {
-                  message: IIlli11I,
-                  response: liIi1I11
-                } = iliIll1I;
-                l11Il1Il(IIlli11I, liIi1I11, liIi1I11 && liIi1I11.body);
-              }
-            });
+            {
+              this.initGotEnv(iil1I);
+              const {
+                url: IIIiiI,
+                ...IiI1lI
+              } = iil1I;
+              this.got.post(IIIiiI, IiI1lI).then(il11I => {
+                {
+                  const {
+                    statusCode: i1i1,
+                    statusCode: lillil,
+                    headers: lliil,
+                    body: IlIlI1
+                  } = il11I;
+                  I1llll(null, {
+                    "status": i1i1,
+                    "statusCode": lillil,
+                    "headers": lliil,
+                    "body": IlIlI1
+                  }, IlIlI1);
+                }
+              }, il111 => {
+                {
+                  const {
+                    message: llI1ii,
+                    response: Ilii1II1
+                  } = il111;
+                  I1llll(llI1ii, Ilii1II1, Ilii1II1 && Ilii1II1.body);
+                }
+              });
+            }
           }
         }
       }
     }
-    ["time"](I11IIiiI, I1IIli1I = null) {
-      const iililll = I1IIli1I ? new Date(I1IIli1I) : new Date();
-      let llIiii1l = {
-        "M+": iililll.getMonth() + 1,
-        "d+": iililll.getDate(),
-        "H+": iililll.getHours(),
-        "m+": iililll.getMinutes(),
-        "s+": iililll.getSeconds(),
-        "q+": Math.floor((iililll.getMonth() + 3) / 3),
-        "S": iililll.getMilliseconds()
-      };
-      /(y+)/.test(I11IIiiI) && (I11IIiiI = I11IIiiI.replace(RegExp.$1, (iililll.getFullYear() + "").substr(4 - RegExp.$1.length)));
-      for (let iililli in llIiii1l) new RegExp("(" + iililli + ")").test(I11IIiiI) && (I11IIiiI = I11IIiiI.replace(RegExp.$1, 1 == RegExp.$1.length ? llIiii1l[iililli] : ("00" + llIiii1l[iililli]).substr(("" + llIiii1l[iililli]).length)));
-      return I11IIiiI;
+    ["time"](iIililIl, IiIl11iI = null) {
+      {
+        const lIIilI1 = IiIl11iI ? new Date(IiIl11iI) : new Date();
+        let iIllIli = {
+          "M+": lIIilI1.getMonth() + 1,
+          "d+": lIIilI1.getDate(),
+          "H+": lIIilI1.getHours(),
+          "m+": lIIilI1.getMinutes(),
+          "s+": lIIilI1.getSeconds(),
+          "q+": Math.floor((lIIilI1.getMonth() + 3) / 3),
+          "S": lIIilI1.getMilliseconds()
+        };
+        /(y+)/.test(iIililIl) && (iIililIl = iIililIl.replace(RegExp.$1, (lIIilI1.getFullYear() + "").substr(4 - RegExp.$1.length)));
+        for (let IIIl1i11 in iIllIli) new RegExp("(" + IIIl1i11 + ")").test(iIililIl) && (iIililIl = iIililIl.replace(RegExp.$1, 1 == RegExp.$1.length ? iIllIli[IIIl1i11] : ("00" + iIllIli[IIIl1i11]).substr(("" + iIllIli[IIIl1i11]).length)));
+        return iIililIl;
+      }
     }
-    ["msg"](llIiii1i = ii1IIil1, l1Ili1II = "", lliI1Il1 = "", I1IIli11) {
-      const iiiIIi11 = IIliIi1i => {
-        {
-          if (!IIliIi1i) return IIliIi1i;
-          if ("string" == typeof IIliIi1i) return this.isLoon() ? IIliIi1i : this.isQuanX() ? {
-            "open-url": IIliIi1i
-          } : this.isSurge() ? {
-            "url": IIliIi1i
-          } : undefined;
-          if ("object" == typeof IIliIi1i) {
-            if (this.isLoon()) {
-              let l1IiIiII = IIliIi1i.openUrl || IIliIi1i.url || IIliIi1i["open-url"],
-                IIlli11l = IIliIi1i.mediaUrl || IIliIi1i["media-url"];
-              return {
-                "openUrl": l1IiIiII,
-                "mediaUrl": IIlli11l
-              };
-            }
-            if (this.isQuanX()) {
-              let IIliIi1l = IIliIi1i["open-url"] || IIliIi1i.url || IIliIi1i.openUrl,
-                IIlli11i = IIliIi1i["media-url"] || IIliIi1i.mediaUrl;
-              return {
-                "open-url": IIliIi1l,
-                "media-url": IIlli11i
-              };
-            }
-            if (this.isSurge()) {
+    ["msg"](iIllIll = IlIIll, IIII11l1 = "", i1lill1I = "", lIlIllii) {
+      {
+        const I1Iilii = IIlillll => {
+          {
+            if (!IIlillll) return IIlillll;
+            if ("string" == typeof IIlillll) return this.isLoon() ? IIlillll : this.isQuanX() ? {
+              "open-url": IIlillll
+            } : this.isSurge() ? {
+              "url": IIlillll
+            } : undefined;
+            if ("object" == typeof IIlillll) {
               {
-                let lliI1Iii = IIliIi1i.url || IIliIi1i.openUrl || IIliIi1i["open-url"];
-                return {
-                  "url": lliI1Iii
-                };
+                if (this.isLoon()) {
+                  let I1IiliI = IIlillll.openUrl || IIlillll.url || IIlillll["open-url"],
+                    iiI1iI1I = IIlillll.mediaUrl || IIlillll["media-url"];
+                  return {
+                    "openUrl": I1IiliI,
+                    "mediaUrl": iiI1iI1I
+                  };
+                }
+                if (this.isQuanX()) {
+                  let lIlIllli = IIlillll["open-url"] || IIlillll.url || IIlillll.openUrl,
+                    l1Ili1li = IIlillll["media-url"] || IIlillll.mediaUrl;
+                  return {
+                    "open-url": lIlIllli,
+                    "media-url": l1Ili1li
+                  };
+                }
+                if (this.isSurge()) {
+                  let IIII11ll = IIlillll.url || IIlillll.openUrl || IIlillll["open-url"];
+                  return {
+                    "url": IIII11ll
+                  };
+                }
               }
             }
           }
+        };
+        if (this.isMute || (this.isSurge() || this.isLoon() ? $notification.post(iIllIll, IIII11l1, i1lill1I, I1Iilii(lIlIllii)) : this.isQuanX() && $notify(iIllIll, IIII11l1, i1lill1I, I1Iilii(lIlIllii))), !this.isMuteLog) {
+          {
+            let l1Ili1ll = ["", "==============📣系统通知📣=============="];
+            l1Ili1ll.push(iIllIll);
+            IIII11l1 && l1Ili1ll.push(IIII11l1);
+            i1lill1I && l1Ili1ll.push(i1lill1I);
+            console.log(l1Ili1ll.join("\n"));
+            this.logs = this.logs.concat(l1Ili1ll);
+          }
         }
-      };
-      if (this.isMute || (this.isSurge() || this.isLoon() ? $notification.post(llIiii1i, l1Ili1II, lliI1Il1, iiiIIi11(I1IIli11)) : this.isQuanX() && $notify(llIiii1i, l1Ili1II, lliI1Il1, iiiIIi11(I1IIli11))), !this.isMuteLog) {
-        let Ilii1Ill = ["", "==============📣系统通知📣=============="];
-        Ilii1Ill.push(llIiii1i);
-        l1Ili1II && Ilii1Ill.push(l1Ili1II);
-        lliI1Il1 && Ilii1Ill.push(lliI1Il1);
-        console.log(Ilii1Ill.join("\n"));
-        this.logs = this.logs.concat(Ilii1Ill);
       }
     }
-    ["log"](...Ilii1Ili) {
-      Ilii1Ili.length > 0 && (this.logs = [...this.logs, ...Ilii1Ili]);
-      console.log(Ilii1Ili.join(this.logSeparator));
+    ["log"](...iiI1iI11) {
+      iiI1iI11.length > 0 && (this.logs = [...this.logs, ...iiI1iI11]);
+      console.log(iiI1iI11.join(this.logSeparator));
     }
-    ["logErr"](lll111il, I1I1Illl) {
-      const I1I1Illi = !this.isSurge() && !this.isQuanX() && !this.isLoon();
-      I1I1Illi ? this.log("", "❗️" + this.name + ", 错误!", lll111il.stack) : this.log("", "❗️" + this.name + ", 错误!", lll111il);
+    ["logErr"](l1lIIIl, IiIl11il) {
+      {
+        const i1II111I = !this.isSurge() && !this.isQuanX() && !this.isLoon();
+        i1II111I ? this.log("", "❗️" + this.name + ", 错误!", l1lIIIl.stack) : this.log("", "❗️" + this.name + ", 错误!", l1lIIIl);
+      }
     }
-    ["wait"](Ilii1Il1) {
-      return new Promise(liIIIIi1 => setTimeout(liIIIIi1, Ilii1Il1));
+    ["wait"](IiIl11ii) {
+      return new Promise(iliIlili => setTimeout(iliIlili, IiIl11ii));
     }
-    ["done"](iIil1I11 = {}) {
-      const l1IiIiIl = new Date().getTime(),
-        lliI1Ii1 = (l1IiIiIl - this.startTime) / 1000;
-      this.log("", "🔔" + this.name + ", 结束! 🕛 " + lliI1Ii1 + " 秒");
+    ["done"](l1li1IiI = {}) {
+      const ii1IiII = new Date().getTime(),
+        iliIlil1 = (ii1IiII - this.startTime) / 1000;
+      this.log("", "🔔" + this.name + ", 结束! 🕛 " + iliIlil1 + " 秒");
       this.log();
-      (this.isSurge() || this.isQuanX() || this.isLoon()) && $done(iIil1I11);
+      (this.isSurge() || this.isQuanX() || this.isLoon()) && $done(l1li1IiI);
     }
-  }(ii1IIil1, l1lIIII);
+  }(IlIIll, i1IllI);
 }
